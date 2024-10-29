@@ -1,0 +1,315 @@
+.member-container{
+  
+width: 100%;
+height: 4338px;
+left:28330px;
+top: 13946px;
+
+}
+    .container-alim{
+      width: 100%;
+      height: 3995px;
+    }
+.container-abdialim{
+    width: 100%;
+    height: 900px;
+    background-size: cover;
+    background-position: center;
+background-image: url('../Membership/img/Rectangle\ 288\ \(2\).png');
+
+
+}
+
+
+// Преимущества и возможности
+
+
+.member-title{
+  font-family: Helvetica;
+font-size:49px;
+font-weight: 400;
+line-height: 69px;
+letter-spacing: -0.04em;
+padding-top: 710px;
+padding-left: 149px;
+color:  #FFFFFF;
+width: 850px;
+white-space: nowrap;
+
+
+}
+
+
+.member-text{
+  width: 731.17px;
+height: 49.63px;
+  font-family: Helvetica;
+font-size: 20px;
+font-weight: 400;
+line-height: 20px;
+letter-spacing: -0.04em;
+padding-top: 20px;
+margin-left: 149px;
+padding-bottom: 50px;
+color:  #FFFFFF;
+
+}
+
+  // {/* Преимущества для сообщества */}
+
+.member-main-img{
+padding-top: 150px;
+padding-left: 150px;
+padding-right: 810px;
+}
+
+
+.member-body-title{
+  width: 595px;
+  height: 41px;
+  margin-top: -370px;
+  margin-left: 660px;
+  font-size: 30px;
+  font-weight: 400px;
+  line-height: 41.4px;
+  white-space: nowrap;
+  font-family: Helvetica;
+
+}
+
+.member-body-text{
+  font-family: Helvetica;
+font-size: 18px;
+font-weight: 400;
+line-height: 19.8px;
+letter-spacing: -0.04em;
+text-align: left;
+width: 640px;
+height: 100px;
+margin-left: 660px;
+padding-top: 14px;
+color:  #00000080;
+
+
+}
+
+
+  // {/* Преимущества для мероприятий */}
+
+
+.member-main-title{
+  width: 640px;
+height: 41px;
+margin-top: 285px;
+padding-left: 150px;
+font-family: Helvetica;
+font-size: 30px;
+font-weight: 400px;
+line-height: 41.4px;
+white-space: nowrap;
+}
+
+
+.member-main-text{
+  width: 640px;
+height: 160px;
+margin-left: 150px;
+color:  #00000080;
+padding-top: 14px;
+font-size: 18px;
+}
+
+
+.img-member{
+width: 640px;
+height: 400px;
+margin-top: -220px;
+padding-left: 810px;
+gap: 0px;
+border-radius: 20px 0px 0px 0px;
+opacity: 0px;
+
+  
+}
+
+
+    // {/* Доступ к ресурсам */}
+
+.member-body-img{
+  margin-left: 150px;
+  margin-top: 60px;
+}
+
+
+  // {/* Преимущества для сетевых возможностей */}
+.member-main-img1{
+  margin-left: 810px;
+margin-top: 280px;
+}
+
+
+.member-main-title1{
+  width: 640px;
+height: 60px;
+margin-top: -385px;
+font-family: Helvetica;
+font-size: 30px;
+font-weight: 700px;
+line-height: 30px;
+letter-spacing: -0.06em;
+padding-left: 150px;
+
+}
+
+
+
+
+.member-main-text1{
+font-family: Helvetica;
+font-size: 18px;
+font-weight: 400;
+line-height: 19.8px;
+letter-spacing: -0.04em;
+text-align: left;
+color: #00000080;
+width: 760px;
+padding-left: 150px;
+padding-top: 14px;
+
+}
+
+
+// категории
+
+.member-category {
+  display: grid;
+  grid-template-columns: repeat(4, 310px);
+  gap: 20px;
+
+  
+
+  .category-img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-left: 139px;
+    margin-top: 40px;
+  }
+
+  .selected {
+    padding: 5px;
+    border-radius: 10px;
+  }
+
+  .category-label {
+      font-size: 20px;
+      margin-left: 145px;
+      font-family:  Helvetica;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin-top: 15px;
+    line-height: 27.6px;
+   
+  }
+}
+
+.ctegory-text{
+  margin-top: 311px;
+  margin-left: 145px;
+    font-size: 40px;  
+    font-family: Helvetica;
+
+}
+
+
+
+// пошаговая инструкция
+
+.member-steps-title{
+  padding-top: 100px;
+  margin-left: 139px;
+  Font :Helvetica;
+  font-family: Helvetica;
+font-size: 40px;
+font-weight: 700;
+line-height: 46px;
+letter-spacing: -0.04em;
+
+  
+}
+
+.member-steps{
+  display: flex;
+padding-top: 40px;
+margin-left: 139px;
+}
+
+
+.block {
+  background-color: #08258B;
+  width: 310px;
+  height: 310px;
+  margin: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-family: Helvetica;
+font-size: 40px;
+font-weight: 700;
+line-height: 46px;
+letter-spacing: -0.04em;
+text-align: center;
+
+}
+
+.member-block-category-title,
+.member-block-category-text {
+  text-align: center;
+  color: #FFFFFF;
+  transition: color 0.3s ease;
+}
+
+.block:hover {
+  background-color: transparent;
+  border: 2px solid #08258B; 
+  transform: scale(1.1);
+}
+
+.block:hover .member-block-category-title {
+  color: #08258B; 
+}
+
+.block:hover .member-block-category-text {
+  color: #08258B;   
+}
+
+
+.member-block-category-title{
+  text-align: center;
+  margin-top: 107px;
+  color: #FFFFFF;
+  Font: Helvetica;
+  font-size: 40px;
+  
+}
+
+.member-block-category-text{
+  padding-top: 1px;
+  padding-left: 8px;
+  Font: Helvetica;
+  color: #FFFFFF80;
+font-size: 18px;
+font-family: Helvetica;
+font-size: 18px;
+font-weight: 400;
+line-height: 19.8px;
+letter-spacing: -0.04em;
+text-align: center;
+
+}
+
+
+
