@@ -1,0 +1,168 @@
+.body{
+    width: 100%;
+    height: 900px;
+    background-image: url('../Services/imgs/Rectangle\ 288\ \(1\).png'); /* Исправленный путь */
+    background-size: cover; /* Это опционально, чтобы изображение полностью заполнило блок */
+    background-position: center; /* Это также опционально, чтобы изображение центрировалось */
+}
+.S-st{
+width: 1600px;
+height: 3417px;
+left: 40540px;
+top: 13970px;
+
+background: #FFFFFF;
+
+}
+.Services{
+    width: 1300px;
+    height: 1160px;
+    top: 1175px;
+    margin-left: -250px;
+}
+.Services-text{
+    width: 384px;
+    height: 34px;
+    left: 810px;
+    top: 1091px;
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 34px;
+    text-transform: uppercase;
+    color: #000000;
+}
+.Services-title{
+    width: 641px;
+    height: 60px;
+    left: 809px;
+    top:    40px;
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 110%;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.04em;
+    color: rgba(0, 0, 0, 0.5);
+}
+.text{
+     margin-left: 100%;
+     margin-top: -410px;
+}
+
+.Services-img{
+    margin-left: 600px;
+    margin-top: 200px;
+}
+.Services-img2{
+    margin-top:-100px;
+    margin-left: 1300px ;
+}
+.text-2{
+    margin-left: 600px;
+    margin-top: 390px;
+}
+.Services-fix{
+    width: 1500px;
+    height: 364px;
+    top: 2060px;
+    margin-left: 280px;
+}
+.Services-imgs-4{
+    display: flex;
+    justify-content: space-evenly;
+}
+.Services-img-3{
+    margin-top: 20px;
+}
+.img-text-s{
+    margin-left: 50px;
+    width: 530px;
+    height: 40px;
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: #000000;
+}
+.ass{
+    width: 281px;
+    height: 22px;
+    left: 480px;
+    top: 2401px;
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 110%;
+    letter-spacing: -0.04em;
+    color: #000000;
+}
+.lol{
+    width: 1500px;
+    height: 964px;
+    top: 2060px;
+    margin-left: 280px;
+}
+.lol-text{
+    width: 536px;
+    height: 40px;
+    left: 810px;
+    top: 2574px;
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: #000000;
+}
+.lol-title{
+    width: 640px;
+    height: 60px;
+    left: 810px;
+    top: 2629px;
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 110%;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.04em;
+    color: rgba(0, 0, 0, 0.5);
+}
+.lol-link{
+    width: 174px;
+    height: 17px;
+    left: 810px;
+    top: 2729px;
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-size: 17px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.04em;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.7);
+}
+.class{
+    margin-left: 730px;
+    margin-top: -400px;
+}
+.class-2{
+    margin-left: 50px;
+    margin-top: 120px;
+}
