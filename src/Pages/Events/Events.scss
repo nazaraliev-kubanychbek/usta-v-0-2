@@ -1,0 +1,503 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    overflow-x: hidden; // Скрыть горизонтальный скролл
+  }
+  
+  .header {
+    margin: auto;
+  
+    &__container {
+      border: 3px solid rgba(175, 170, 170, 0.5);
+      width: 90%;
+      border-radius: 20px;
+      margin: -10px auto;
+    }
+  
+    hr {
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+  
+    &-head {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      align-items: center;
+    }
+  
+    &-foot {
+      padding: 20px;
+    }
+  
+    &__nav {
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+  
+        li {
+          margin: 5px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  
+  .t {
+    text-decoration: none;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -0.04em;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.8);
+  
+    &:active,
+    &:focus {
+      // Стили для активной ссылки
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 18px;
+      color: #f7f3f3;
+      text-decoration: double;
+      border-bottom: 2px solid #ffffff;
+    }
+  }
+  
+  .header-head-left {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .btn-for-popup {
+    background-color: #08258b;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  
+    p {
+      font-family: Helvetica;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: -0.04em;
+      text-align: left;
+      color: #b61212;
+    }
+  }
+  
+  .container-title {
+    padding: 20px;
+    width: 700px;
+    margin: 300px 90px;
+  }
+  
+  .title-header {
+    font-family: Helvetica;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: -0.06em;
+    text-align: left;
+    color: #fff;
+  }
+  
+  .text-header {
+    font-family: Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: rgb(194, 182, 182);
+    max-width: 600px;   /* Ограничивает ширину текста */
+    padding-bottom: 20px;
+  }
+  
+  .btn-header-title {
+    font-family: Helvetica;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -0.04em;
+    color: #001c7c;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .language-switcher {
+    position: relative;
+  
+    .dropdown-button {
+      background-color: transparent; // Цвет кнопки
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  
+    .dropdown-content {
+      display: block;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+  
+      a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+  
+        &:hover {
+          background-color: #520909;
+        }
+      }
+    }
+  }
+  
+  .events {
+    text-align: center;
+  
+    .images {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+  
+      li {
+        flex: 1;
+        margin: 0 5px;
+  
+        img {
+          width: 100%;
+          max-width: 300px;
+          height: auto;
+        }
+  
+        p {
+          margin-top: 5px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  
+  .event-title {
+    text-align: left;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #0d0000;
+  }
+  
+  .event-description {
+    width: 640px;
+    height: 96px;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .dots-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  
+    .dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.2);
+  
+      &.black-dot {
+        background-color: black;
+      }
+    }
+  }
+  
+  .images-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  
+    p {
+      margin-top: 5px;
+      font-size: 18px;
+    }
+  }
+  
+  .key-annual-title {
+    margin: 15px;
+    padding: 5px;
+  }
+  
+  .video-content-container {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+  
+    .video1 {
+      width: 100%;
+      max-width: 640px;
+      height: auto;
+      cursor: pointer;
+      margin-right: 20px;
+    }
+  
+    .text-video1 {
+      flex: 1;
+  
+      .title-text-video1 {
+        font-family: Helvetica;
+        // font-size: 24px;
+        font-weight: bold;
+        color: #000;
+        margin: -100px 0 0 0;
+      }
+      .text-video1 {
+        width: 640px;
+        height: 96px;
+        opacity: 0;
+        text-align: left;
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+    
+    .title-text-video2 {
+      font-family: Helvetica;
+      // font-size: 24px;
+      font-weight: bold;
+      color: #000;
+      margin: -100px 0 0 0;
+    }
+  }
+  
+  .video-content-container-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 100px 0;
+  
+    .video2 {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .text-video2 {
+      font-family: Helvetica;
+
+      width: 530px;
+      height: auto;
+      opacity: 1;
+      text-align: left;
+      color: rgba(0, 0, 0, 0.9);
+    }
+  }
+  
+  .key-annual-events {
+    max-width: 1430px;
+    margin: 0 auto; // Центрируем контейнер на странице
+    padding: 20px;
+    border-radius: 8px; // Закругление углов
+  
+    .key-annual-title {
+      font-size: 27px;
+      margin-bottom: 20px;
+      color: #000000;
+      font-family: Helvetica;
+    }
+  
+    .images-1 {
+      display: flex;
+      justify-content: space-between; // Пространство между элементами
+      flex-wrap: wrap; // Разрешаем перенос элементов на следующую строку при необходимости
+      gap: 20px; // Расстояние между элементами
+  
+      li {
+        list-style: none; // Убираем маркеры списка
+        flex: 1 1 calc(25% - 20px); // Каждый элемент занимает 25% ширины контейнера с учетом отступов
+        box-sizing: border-box;
+        text-align: center;
+  
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 8px;
+        }
+  
+        p {
+          margin-top: 10px;
+          font-size: 16px;
+          color: black;
+          font-family: Helvetica;
+
+        }
+      }
+    }
+  }
+
+  .events-container {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  .container-title {
+    text-align: center;
+  }
+  
+  .events, .key-annual-events {
+    margin-top: 40px;
+    
+  }
+  
+  .images, .images-1 {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .images li, .images-1 li {
+    width: 24%;
+  }
+  
+  .video-content-container, .video-content-container-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+  }
+  
+  .video1, .video2 {
+    width: 45%;
+  }
+  
+  .text-video1, .text-video2 {
+    width: 50%;
+  }
+  
+  .dots-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    border-radius: 50%;
+    margin: 0 5px;
+  }
+  
+  .black-dot {
+    background-color: black;
+  }
+
+
+  .images {
+    font-family: Helvetica;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  
+    li {
+      flex: 1;
+      margin: 0 5px;
+  
+      img {
+        width: 100%;
+        max-width: 300px; // Замените на нужный размер
+        height: auto;
+      }
+  
+      p {
+        margin-top: 5px;
+        font-size: 18px;
+        font-family: Helvetica;
+
+      }
+    }
+  }
+  
+  // Вы также можете добавить классы, чтобы задать размеры изображений
+  .video-content-container img,
+  .video-content-container-2 img {
+    width: 640px;
+    max-width: 910px; // или другой размер, если необходимо
+  }  
+
+
+ 
+  .overlay {
+    display: flex;
+    flex-direction: column;
+    align-content: end;
+    justify-content: end;
+    width: 100%;
+    height: 891px;
+    background-image: url('./images/Rectangle 999.png');
+    padding: 70px 75px 150px;
+    gap: 40px; // добавлена точка с запятой
+    margin-bottom: 100px; // Настройте значение по вашему усмотрению
+  }
+
+
+
+  .event-text h1{
+font-family: Helvetica;
+font-size: 40px;
+font-weight: 400;
+line-height: 40px;
+letter-spacing: -0.04em;
+text-align: left;
+color:black;
+margin-bottom: 20px;
+
+
+  }
+  .event-text h2 {
+    font-family: Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: #00000080;
+
+    max-width: 640px;   /* Ограничивает ширину текста */
+    padding-bottom: 20px;
+}
+
+
+.text-video22 {
+font-family: Helvetica;
+    width: 530px;
+    height: auto;
+    opacity: 1;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.9);               // Внутренние отступы
+}
+
