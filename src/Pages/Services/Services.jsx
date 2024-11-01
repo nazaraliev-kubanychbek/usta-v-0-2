@@ -10,7 +10,7 @@ import imgs6 from "./imgs/Rectangle 123.png";
 import imgs7 from "./imgs/Rectangle 59.png"
 function Services() {
   return (
-    <div>
+    <div className='dox-box'>
       <div className='body'>
         <h1 className='body-text'>Услуги</h1>
         <p className='body-title'>
@@ -18,6 +18,7 @@ function Services() {
           Мы делаем инженерный подход понятным и привлекательным, чтобы каждый мог найти себя в этой профессии и реализоваться.
         </p>
       </div>
+      <div className='box'>
       <div className='Services'>
         <div className='Services-imgs'>
             <img className='Services-img' src={imgs1} alt="Услуга 1" />
@@ -62,6 +63,7 @@ function Services() {
           <p className='lol-title'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim. Praesent turpis odio rutrum platea egestas duis turpis nunc. Non vitae ac risus molestie tristique molestie enim volutpat. Vehicula iaculis sem velit accumsan velit.</p>
           <a className='lol-link' href="#">Узнать подробнее</a>
         </div>
+      </div>
       </div>
     </div> 
   );

@@ -4,13 +4,37 @@
     background-image: url('../Services/imgs/Rectangle\ 288\ \(1\).png'); /* Исправленный путь */
     background-size: cover; /* Это опционально, чтобы изображение полностью заполнило блок */
     background-position: center; /* Это также опционально, чтобы изображение центрировалось */
+    background-position: center;
+    display: flex;
+    flex-direction: column;
 }
-.S-st{
-width: 1600px;
-height: 3417px;
-left: 40540px;
-top: 13970px;
-
+.box{
+    margin-left: -90px;
+}
+.body-text{
+    width: 536px;
+    height: 50px;
+    font-family: 'Helvetica';
+    font-size: 50px;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-top: 700px; 
+    margin-left: 200px;
+}
+.body-title{
+    width: 733px;
+    font-family: 'Helvetica';
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+    color: #FFFFFF;
+    margin-top: 20px;
+    margin-left: 200px;
+}
+.dox-box{
+width: 100%;
+height: 3017px;
 background: #FFFFFF;
 
 }
@@ -107,8 +131,6 @@ background: #FFFFFF;
 }
 .lol{
     width: 1500px;
-    height: 964px;
-    top: 2060px;
     margin-left: 280px;
 }
 .lol-text{

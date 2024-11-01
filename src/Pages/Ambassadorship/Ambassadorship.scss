@@ -1,85 +1,105 @@
-.body1{
+.Ambassadorship{
     width: 100%;
     height: 900px;
-    background-image: url('../Ambassadorship/imgs/Rectangle 288.png'); /* Исправленный путь */
-    background-size: cover; /* Это опционально, чтобы изображение полностью заполнило блок */
-    background-position: center; /* Это также опционально, чтобы изображение центрировалось */
+    background-image: url('../Ambassadorship/imgs/Rectangle 288.png'); 
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    &-text{
+        width: 469px;
+        height: 50px;
+        left: calc(50% - 469px/2 - 417.5px);
+        margin-top: 700px;
+        margin-left: 200px;
+        font-family: 'Helvetica';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 50px;
+        line-height: 100%;
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.04em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+    &-title{
+        width: 733px;
+        height: 60px;
+        left: calc(50% - 733px/2 - 285.5px);
+        margin-top: 20px;
+        margin-left: 200px;
+        font-family: 'Helvetica';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 100%;
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.04em;
+        color: #FFFFFF;
+    }
+    &-contoner{
+        width: 1300px;
+        height: 794px;
+        left: 150px;
+    }
+    &-texts{
+        width: 1300px;
+        height: 794px;
+        margin-left: 70px;
+        margin-top: 40px;
+    }
+    &-link{
+        border: none;
+        margin-left: 70px;
+        z-index: 0;
+        width: 124px;
+        height: 24px;
+        font-family: 'Helvetica';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        color: #000000;
+        order: 0;
+        flex-grow: 0;
+        text-decoration: none;
+    }
+    &-imgs{
+        margin-top: -680px;
+        display: flex;
+        justify-content: space-evenly;
+        &-alt{
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+    &-imgs-text{
+        width: 294px;
+        height: 40px;
+        left: 150px;
+        margin-top: 15px;
+        font-family: 'Helvetica';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 110%;
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.04em;
+        color: #000000;
+    }
+    &-imgs-alt{
+        height: 500px;
+    }
+    &-imgs-alt-img{
+        margin-top: 30px;
+    }
 }
 
-.body-text{
-    position: absolute;
-    width: 469px;
-    height: 50px;
-    left: calc(50% - 469px/2 - 417.5px);
-    top: 740px;
-    font-family: 'Helvetica';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 50px;
-    line-height: 100%;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.04em;
-    text-transform: uppercase;
-    color: #FFFFFF;
-}
-.body-title{
-    position: absolute;
-    width: 733px;
-    height: 60px;
-    left: calc(50% - 733px/2 - 285.5px);
-    top: 820px;
-    font-family: 'Helvetica';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 100%;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.04em;
-    color: #FFFFFF;
-}
-.body-contoner{
-    width: 1300px;
-    height: 794px;
-    left: 150px;
-    top: 1050px;
-}
-.body-texts{
-    position: absolute;
-    width: 1300px;
-    height: 794px;
-    left: 150px;
-    top: 1050px;
-}
-.body-a{
-    border: none;
-    margin-left: 40px;
-    margin-top: 2000px;
-}
-.body-imgs{
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 200px;
-}
-.body-imgs-2{
-    display: flex;
-    justify-content: space-evenly;
-  
-}
 
-.imgs-text{
-    width: 294px;
-    height: 40px;
-    left: 150px;
-    top: 1479px;
-    font-family: 'Helvetica';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 110%;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.04em;
-    color: #000000;
-}
+
+
+
+
+

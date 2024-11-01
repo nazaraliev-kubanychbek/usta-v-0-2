@@ -1,10 +1,13 @@
+import React from 'react';
+
+import "./Education.scss"
 
 function Education() {
   return (
-    <div>
+    <div className="education-page">
       
     </div>
-  )
+  );
 }
 
-export default Education
+export default Education;
