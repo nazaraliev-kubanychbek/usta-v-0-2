@@ -1,0 +1,146 @@
+.education-page {
+  font-family: Arial, sans-serif;
+  color: #333;
+
+  .education-body {
+    background-image: url('../Education/img/educationH.png');
+    height: 625px;
+
+    padding-top: 400px;
+  
+    & h1 {
+      color: #fff;
+      font-family: Helvetica;
+      font-size: 50px;
+      font-weight: 400;
+      line-height: 50px;
+      text-align: left;
+    }
+
+    & p {
+      font-family: Helvetica;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: -0.04em;
+      text-align: left;
+      color: #fff;
+      width: 600px;
+margin-top: 20px;
+
+
+
+    }
+
+
+  }
+
+  .education-content-section{
+    margin-top: 100px;
+
+  }
+
+  .education-content-item {
+    display: flex;
+    padding: 20px;
+
+
+    img,
+    video {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+
+    &.video {
+      width: 95%;
+      height: 100%;
+      flex-direction: row;
+
+      .education-text {
+
+
+        h2 {
+          font-family: Helvetica;
+          font-size: 30px;
+          font-weight: 700;
+          line-height: 34.5px;
+
+          color: #000000;
+
+        }
+
+        .education-title {
+          font-family: Helvetica;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 19.8px;
+
+          color: #00000080;
+        }
+      }
+    }
+
+
+
+
+    .education-text {
+
+
+
+      h2 {
+        font-family: Helvetica;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 34.5px;
+        text-align: left;
+        color: #000000;
+        margin-bottom: 10px;
+      }
+
+      .education-title {
+        font-family: Helvetica;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 19.8px;
+        letter-spacing: -0.04em;
+        text-align: left;
+        color: #00000080;
+      }
+    }
+  }
+}
+
+.education-text-video {
+  & h1 {
+    font-family: Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: -0.04em;
+    color: #000000;
+    width: 356px;
+    height: 22px;
+    top: 3020px;
+    left: 810px;
+
+
+
+  }
+
+  & p {
+    font-family: Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 19.8px;
+    letter-spacing: -0.04em;
+    width: 640px;
+    height: 60px;
+    top: 3057px;
+    left: 810px;
+
+    color: #00000080;
+
+  }
+
+}
