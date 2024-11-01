@@ -10,59 +10,59 @@ import img8 from "../Ambassadorship//imgs/Rectangle 284 (7).png"
 
 function Ambassadorship() {
   return (
-    <div>
-        <div className='body1'> 
-            <h1 className='body-text'>Амбассадорство</h1>
-            <p className='body-title'>“USTA International” вдохновляет и направляет людей в сфере инженерии. Мы делаем инженерный подход понятным и привлекательным, чтобы каждый мог найти себя в этой профессии и реализоваться</p>
+  <div>
+      <div className='Ambassadorship'> 
+          <h1 className='Ambassadorship-text'>Амбассадорство</h1>
+          <p className='Ambassadorship-title'>“USTA International” вдохновляет и направляет людей в сфере инженерии. Мы делаем инженерный подход понятным и привлекательным, чтобы каждый мог найти себя в этой профессии и реализоваться</p>
+      </div>
+        <div className='Ambassadorship-container'> 
+          <div className='Ambassadorship-texts'>
+          <a className='Ambassadorship-link' href="#">Реквизиты</a>
+          <a className='Ambassadorship-link' href="#">Недвижимость</a>
+          <a className='Ambassadorship-link' href="#">Участки</a>
+          <a className='Ambassadorship-link' href="#">Оборудования</a>
+          <a className='Ambassadorship-link' href="#">Техника</a>
+          <a className='Ambassadorship-link' href="#">Коммерческие предложения</a>
+          <a className='Ambassadorship-link' href="#">Услуги</a>
+          </div>
+        <div className='Ambassadorship-imgs'>
+        <div>
+        <img src={img1} alt="Описание изображения" /> 
+        <p className='Ambassadorship-imgs-text'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim.</p>
         </div>
-        <div className='body-container'> 
-          <div className='body-texts'>
-            <a className='body-a' href="#">Реквизиты</a>
-            <a className='body-a' href="#">Недвижимость</a>
-            <a className='body-a' href="#">Участки</a>
-            <a className='body-a' href="#">Оборудования</a>
-            <a className='body-a' href="#">Техника</a>
-            <a className='body-a' href="#">Коммерческие предложения</a>
-            <a className='body-a' href="#">Услуги</a>
+          <div>
+          <img src={img2} alt="Описание изображения" />
+          <p className='Ambassadorship-imgs-text'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim.</p>
           </div>
-          <div className='body-imgs'>
-                <div>
-                <img src={img1} alt="Описание изображения" /> 
-                <p className='imgs-text'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim.</p>
-                </div>
-                <div>
-                <img src={img2} alt="Описание изображения" />
-                <p className='imgs-text'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim.</p>
-                </div>
-                <div>
-                <img src={img3} alt="Описание изображения" />
-                <p className='imgs-text'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim.</p>
-                </div>
-                <div>
-                <img src={img4} alt="Описание изображения" /> 
-                <p className='imgs-text'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim.</p>
-             </div>
-          </div>
-              <div className='body-imgs-2'>
-                <div>
-                <img src={img5} alt="Описание изображения" /> 
-                <p className='imgs-text'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim.</p>
-                </div>
-                <div>
-                <img src={img6} alt="Описание изображения" />
-                <p className='imgs-text'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim.</p>
-                </div>
-                <div>
-                <img src={img7} alt="Описание изображения" />
-                <p className='imgs-text'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim.</p>
-                </div>
-                <div>
-                <img src={img8} alt="Описание изображения" /> 
-                <p className='imgs-text'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim.</p>
-                </div>
+            <div>
+            <img src={img3} alt="Описание изображения" />
+            <p className='Ambassadorship-imgs-text'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim.</p>
+            </div>
+              <div>
+              <img src={img4} alt="Описание изображения" /> 
+              <p className='Ambassadorship-imgs-text'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim.</p>
               </div>
         </div>
-    </div>
+          <div className='Ambassadorship-imgs-alt'>
+            <div>
+            <img className='Ambassadorship-imgs-alt-img' src={img5} alt="Описание изображения" /> 
+            <p className='Ambassadorship-imgs-text'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim.</p>
+            </div>
+              <div>
+              <img className='Ambassadorship-imgs-alt-img' src={img6} alt="Описание изображения" />
+              <p className='Ambassadorship-imgs-text'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim.</p>
+              </div>
+                <div>
+                <img className='Ambassadorship-imgs-alt-img' src={img7} alt="Описание изображения" />
+                <p className='Ambassadorship-imgs-text'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim.</p>
+                </div>
+                  <div>
+                  <img className='Ambassadorship-imgs-alt-img' src={img8} alt="Описание изображения" /> 
+                  <p className='Ambassadorship-imgs-text'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim.</p>
+                  </div>
+            </div>
+      </div>
+  </div>
   )
 }
 
