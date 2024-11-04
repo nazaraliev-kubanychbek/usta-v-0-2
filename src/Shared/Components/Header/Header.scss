@@ -14,6 +14,7 @@
 .Header {
   margin-top: 25px;
   position: fixed;
+  z-index: 10;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -50,7 +51,8 @@
 
       li {
         list-style-type: none;
-        a {
+        a,
+        button {
           white-space: nowrap;
           line-height: 16px;
           font-size: 16px;
@@ -58,6 +60,9 @@
           font-weight: lighter;
           color: #ffffff80;
           font-family: Helvetica;
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
         }
       }
     }
@@ -69,7 +74,7 @@
     &__logo {
       padding: 15px 20px;
     }
-    &__options {  
+    &__options {
       padding: 45px 20px 10px;
       height: auto;
       &-btn {

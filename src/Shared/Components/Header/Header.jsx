@@ -14,6 +14,27 @@ function Header() {
     }
   };
 
+  function scrollToBottom(duration = 500) {
+    const start = window.pageYOffset;
+    const end = document.body.scrollHeight - window.innerHeight;
+    const distance = end - start;
+    let startTime = null;
+
+    function animation(currentTime) {
+      if (startTime === null) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const progress = Math.min(timeElapsed / duration, 1);
+      window.scrollTo(0, start + distance * progress);
+
+      if (timeElapsed < duration) {
+        requestAnimationFrame(animation);
+      }
+    }
+
+    requestAnimationFrame(animation);
+  }
+
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -103,12 +124,14 @@ function Header() {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink
-                    to="/contacts"
-                    className={({ isActive }) => (isActive ? "isActive" : "")}
-                  >
-                    Контакты
-                  </NavLink>
+                <button
+                      onClick={()=>{
+                        scrollToBottom(500)
+                      }}
+
+                    >
+                      Контакты
+                    </button>
                 </li>
               </ul>
             </nav>
@@ -193,12 +216,14 @@ function Header() {
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink
-                      to="/contacts"
-                      className={({ isActive }) => (isActive ? "isActive" : "")}
+                    <button
+                      onClick={()=>{
+                        scrollToBottom(500)
+                      }}
+
                     >
                       Контакты
-                    </NavLink>
+                    </button>
                   </li>
                 </ul>
               </nav>

@@ -1,26 +1,23 @@
 .body{
     width: 100%;
-    height: 900px;
+    height: 100vh;
     background-image: url('../Services/imgs/Rectangle\ 288\ \(1\).png'); /* Исправленный путь */
     background-size: cover; /* Это опционально, чтобы изображение полностью заполнило блок */
     background-position: center; /* Это также опционально, чтобы изображение центрировалось */
     background-position: center;
-    display: flex;
-    flex-direction: column;
+    padding-top: 500px;
 }
-.box{
-    margin-left: -90px;
-}
+
+
+
 .body-text{
     width: 536px;
-    height: 50px;
     font-family: 'Helvetica';
     font-size: 50px;
     letter-spacing: -0.04em;
     text-transform: uppercase;
     color: #FFFFFF;
-    margin-top: 700px; 
-    margin-left: 200px;
+
 }
 .body-title{
     width: 733px;
@@ -30,25 +27,19 @@
     letter-spacing: -0.04em;
     color: #FFFFFF;
     margin-top: 20px;
-    margin-left: 200px;
 }
-.dox-box{
-width: 100%;
-height: 3017px;
-background: #FFFFFF;
 
-}
 .Services{
-    width: 1300px;
-    height: 1160px;
-    top: 1175px;
-    margin-left: -250px;
+   margin-top: 175px;
+   .row{
+    row-gap: 60px;
+   }
+}
+.text{
+    margin-top: 20px;
 }
 .Services-text{
     width: 384px;
-    height: 34px;
-    left: 810px;
-    top: 1091px;
     font-family: 'Helvetica';
     font-style: normal;
     font-weight: 700;
@@ -59,9 +50,6 @@ background: #FFFFFF;
 }
 .Services-title{
     width: 641px;
-    height: 60px;
-    left: 809px;
-    top:    40px;
     font-family: 'Helvetica';
     font-style: normal;
     font-weight: 400;
@@ -71,29 +59,11 @@ background: #FFFFFF;
     align-items: center;
     letter-spacing: -0.04em;
     color: rgba(0, 0, 0, 0.5);
-}
-.text{
-     margin-left: 100%;
-     margin-top: -410px;
+    margin-top: 15px;
 }
 
-.Services-img{
-    margin-left: 600px;
-    margin-top: 200px;
-}
-.Services-img2{
-    margin-top:-100px;
-    margin-left: 1300px ;
-}
-.text-2{
-    margin-left: 600px;
-    margin-top: 390px;
-}
 .Services-fix{
-    width: 1500px;
-    height: 364px;
-    top: 2060px;
-    margin-left: 280px;
+    margin-top: 125px;
 }
 .Services-imgs-4{
     display: flex;
@@ -103,7 +73,6 @@ background: #FFFFFF;
     margin-top: 20px;
 }
 .img-text-s{
-    margin-left: 50px;
     width: 530px;
     height: 40px;
     font-family: 'Helvetica';
@@ -130,8 +99,8 @@ background: #FFFFFF;
     color: #000000;
 }
 .lol{
-    width: 1500px;
-    margin-left: 280px;
+   margin-top: 100px;
+   margin-bottom: 150px;
 }
 .lol-text{
     width: 536px;
@@ -151,9 +120,6 @@ background: #FFFFFF;
 }
 .lol-title{
     width: 640px;
-    height: 60px;
-    left: 810px;
-    top: 2629px;
     font-family: 'Helvetica';
     font-style: normal;
     font-weight: 400;
@@ -163,12 +129,9 @@ background: #FFFFFF;
     align-items: center;
     letter-spacing: -0.04em;
     color: rgba(0, 0, 0, 0.5);
+    margin-top: 15px;
 }
 .lol-link{
-    width: 174px;
-    height: 17px;
-    left: 810px;
-    top: 2729px;
     font-family: 'Helvetica';
     font-style: normal;
     font-size: 17px;
@@ -179,12 +142,14 @@ background: #FFFFFF;
     text-decoration-line: underline;
     text-transform: uppercase;
     color: rgba(0, 0, 0, 0.7);
+    margin-top: 40px;
+}
+
+.clas-2{
+    img{
+        width: 100%;
+    }
 }
 .class{
-    margin-left: 730px;
-    margin-top: -400px;
-}
-.class-2{
-    margin-left: 50px;
-    margin-top: 120px;
+    padding-top: 50px;
 }
