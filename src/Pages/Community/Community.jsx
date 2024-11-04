@@ -1,4 +1,4 @@
-import Partners from '../../../../usta/src/Shared/Components/Partners/Partners'
+import Partners from '../../Shared/Components/Partners/Partners'
 import Index from './ui/index'
 import Slider from './ui/Slider';
 import './Community.scss'
