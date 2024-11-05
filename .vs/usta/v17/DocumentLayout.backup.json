@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\GitHub\\Geeks PRO\\USTA\\usta\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GitHub\\Geeks PRO\\USTA\\usta\\src\\Pages\\Home\\CardEvent.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Pages\\Home\\CardEvent.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GitHub\\Geeks PRO\\USTA\\usta\\src\\Pages\\Community\\Community.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Pages\\Community\\Community.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GitHub\\Geeks PRO\\USTA\\usta\\src\\Pages\\Home\\Home.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Pages\\Home\\Home.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CardEvent.jsx",
+              "DocumentMoniker": "D:\\GitHub\\Geeks PRO\\USTA\\usta\\src\\Pages\\Home\\CardEvent.jsx",
+              "RelativeDocumentMoniker": "src\\Pages\\Home\\CardEvent.jsx",
+              "ToolTip": "D:\\GitHub\\Geeks PRO\\USTA\\usta\\src\\Pages\\Home\\CardEvent.jsx",
+              "RelativeToolTip": "src\\Pages\\Home\\CardEvent.jsx",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-11-04T10:57:57.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Home.jsx",
+              "DocumentMoniker": "D:\\GitHub\\Geeks PRO\\USTA\\usta\\src\\Pages\\Home\\Home.jsx",
+              "RelativeDocumentMoniker": "src\\Pages\\Home\\Home.jsx",
+              "ToolTip": "D:\\GitHub\\Geeks PRO\\USTA\\usta\\src\\Pages\\Home\\Home.jsx",
+              "RelativeToolTip": "src\\Pages\\Home\\Home.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-11-04T10:56:19.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Community.jsx",
+              "DocumentMoniker": "D:\\GitHub\\Geeks PRO\\USTA\\usta\\src\\Pages\\Community\\Community.jsx",
+              "RelativeDocumentMoniker": "src\\Pages\\Community\\Community.jsx",
+              "ToolTip": "D:\\GitHub\\Geeks PRO\\USTA\\usta\\src\\Pages\\Community\\Community.jsx",
+              "RelativeToolTip": "src\\Pages\\Community\\Community.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-11-04T10:55:17.198Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
