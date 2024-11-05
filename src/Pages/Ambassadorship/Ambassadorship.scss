@@ -1,84 +1,104 @@
 .Ambassadorship{
-    width: 100%;
-    height: 900px;
-    background-image: url('../Ambassadorship/imgs/Rectangle 288.png'); 
-    background-size: cover; 
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    &-text{
-        width: 469px;
-        height: 50px;
-        left: calc(50% - 469px/2 - 417.5px);
-        margin-top: 700px;
-        margin-left: 200px;
-        font-family: 'Helvetica';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 50px;
-        line-height: 100%;
+    .mainscreen {
+        display: flex;
+        flex-direction: column;
+        align-content: end;
+        justify-content: end;
+        width: 100%;
+        height: 100vh;
+        background-image: url("../Ambassadorship//imgs/Rectangle\ 288.png");
+        padding: 70px 75px 150px;
+        gap: 40px;
+        background-repeat: round;
+
+        &-text {
+            height: 100px;
+            width: 70%;
+            color: white;
+            font-family: Helvetica;
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 20px;
+            letter-spacing: -0.04em;
+            text-align: left;
+
+
+            &__h1 {
+
+                font-family: 'Helvetica';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 50px;
+                line-height: 100%;
+                display: flex;
+                align-items: center;
+                letter-spacing: -0.04em;
+                text-transform: uppercase;
+
+                color: #FFFFFF;
+
+
+            }
+
+            &__p {
+                font-family: 'Helvetica';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 100%;
+                margin-top: 20px;
+                display: flex;
+                align-items: center;
+                letter-spacing: -0.04em;
+                color: #FFFFFF;
+            }
+        }
+    }
+    &-container{
+      
+        width: 100%;
         display: flex;
         align-items: center;
-        letter-spacing: -0.04em;
-        text-transform: uppercase;
-        color: #FFFFFF;
-    }
-    &-title{
-        width: 733px;
-        height: 60px;
-        left: calc(50% - 733px/2 - 285.5px);
-        margin-top: 20px;
-        margin-left: 200px;
-        font-family: 'Helvetica';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 100%;
-        display: flex;
-        align-items: center;
-        letter-spacing: -0.04em;
-        color: #FFFFFF;
-    }
-    &-contoner{
-        width: 1300px;
-        height: 794px;
-        left: 150px;
-    }
-    &-texts{
-        width: 1300px;
-        height: 794px;
-        margin-left: 70px;
-        margin-top: 40px;
-    }
-    &-link{
-        border: none;
-        margin-left: 70px;
-        z-index: 0;
-        width: 124px;
-        height: 24px;
-        font-family: 'Helvetica';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 16px;
-        color: #000000;
-        order: 0;
-        flex-grow: 0;
-        text-decoration: none;
+        margin-top: 100px;
+        padding-left: 150px;
+        &-links{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            // padding-left: -100px;
+            margin-left: -270px; 
+            &-link{
+                font-family: Helvetica;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: -0.04em;
+                text-align: left;
+                margin: 30px;
+                text-decoration: none;
+                color:  #000000;
+            }
+    
+        }
+      
     }
     &-imgs{
-        margin-top: -680px;
+        width: 100%;
         display: flex;
-        justify-content: space-evenly;
+        margin-top: 100px;
+        justify-content: center;
         &-alt{
             display: flex;
-            justify-content: space-evenly;
+            justify-content: center;
+            padding-top: 20px;
         }
     }
     &-imgs-text{
         width: 294px;
         height: 40px;
         left: 150px;
-        margin-top: 15px;
+        margin: 20px;
+        margin-top: 0px;
         font-family: 'Helvetica';
         font-style: normal;
         font-weight: 400;
@@ -89,17 +109,11 @@
         letter-spacing: -0.04em;
         color: #000000;
     }
-    &-imgs-alt{
-        height: 500px;
-    }
+   
     &-imgs-alt-img{
-        margin-top: 30px;
+        margin: 20px;
+    }
+    &-padding{
+        margin-top: 100px;
     }
 }
-
-
-
-
-
-
-
