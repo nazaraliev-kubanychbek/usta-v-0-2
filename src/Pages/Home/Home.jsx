@@ -15,7 +15,6 @@ function Home() {
     <div className="home">
       <div className="main-screen">
         <div className="container">
-          <div className="column">
             <div className="main-screen-text">
               USTA International — это международное сообщество инженеров и
               специалистов, фокусирующееся на устойчивых технологических
@@ -25,7 +24,6 @@ function Home() {
               способствуем глобальному партнерству для устойчивого развития&quot;
             </div>
             <div className="main-screen-btn">ПРИСОЕДИНИТЬСЯ</div>
-          </div>
         </div>
       </div>
       <Slider />
