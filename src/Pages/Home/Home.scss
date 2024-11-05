@@ -10,6 +10,7 @@
         height: 100vh;
         background-image: url(../../Shared/Images/image-bg.png);
         padding: 70px 75px 150px;
+        background-repeat: round;
         gap: 40px;
 
         &-head {
@@ -87,6 +88,7 @@
                     width: 310px;
                     height: 240px;
                     border-radius: 20px;
+                    object-fit:cover;
                 }
 
                 &__date {
@@ -100,11 +102,31 @@
                     padding: 10px 0px;
                 }
 
-                &__name {
+                &__text {
                     font-family: Helvetica;
                     font-size: 16px;
                     font-weight: 400;
                     line-height: 17.6px;
+                    letter-spacing: -0.04em;
+                    text-align: left;
+                }
+
+                &__pro {
+                    font-family: Helvetica;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 21.6px;
+                    letter-spacing: -0.04em;
+                    text-align: left;
+                    opacity: 50%;
+                    padding: 10px 0px;
+                }
+
+                &__name {
+                    font-family: Helvetica;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 21.6px;
                     letter-spacing: -0.04em;
                     text-align: left;
                 }
@@ -140,36 +162,41 @@
                 margin-bottom: 45px;
             }
 
-            h1 {
-                font-family: Helvetica;
-                font-size: 40px;
-                font-weight: 400;
-                line-height: 40px;
-                letter-spacing: -0.04em;
-                text-align: left;
-            }
+            div {
 
-            h3 {
-                font-family: Helvetica;
-                font-size: 24px;
-                font-weight: 700;
-                line-height: 26.4px;
-                letter-spacing: -0.04em;
-                text-align: left;
-            }
 
-            p {
-                margin-top: 20px;
-                font-family: Helvetica;
-                font-size: 18px;
-                font-weight: 400;
-                line-height: 19.8px;
-                letter-spacing: -0.04em;
-                text-align: left;
-                opacity: 50%;
 
-                ul {
-                    padding: 0px 20px;
+                h1 {
+                    font-family: Helvetica;
+                    font-size: 40px;
+                    font-weight: 400;
+                    line-height: 40px;
+                    letter-spacing: -0.04em;
+                    text-align: left;
+                }
+
+                h3 {
+                    font-family: Helvetica;
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 26.4px;
+                    letter-spacing: -0.04em;
+                    text-align: left;
+                }
+
+                p {
+                    margin-top: 20px;
+                    font-family: Helvetica;
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 19.8px;
+                    letter-spacing: -0.04em;
+                    text-align: left;
+                    opacity: 50%;
+
+                    ul {
+                        padding: 0px 20px;
+                    }
                 }
             }
 
@@ -180,8 +207,16 @@
                 line-height: 20px;
                 letter-spacing: -0.04em;
                 text-align: left;
+                text-decoration: none;
+                text-decoration-color: black;
                 text-decoration: underline 2px;
-                cursor: pointer;
+                color: #000;
+
+                &:hover,
+                &:visited,
+                &:active {
+                    color: black;
+                }
             }
         }
     }
@@ -208,6 +243,7 @@
                 line-height: 60px;
                 letter-spacing: -0.04em;
                 text-align: left;
+                margin-top: -6px;
             }
 
             p {
@@ -227,7 +263,16 @@
                 line-height: 20px;
                 letter-spacing: -0.04em;
                 text-align: left;
+                text-decoration: none;
+                text-decoration-color: black;
                 text-decoration: underline 2px;
+                color: #000;
+
+                &:hover,
+                &:visited,
+                &:active {
+                    color: black;
+                }
             }
         }
     }

@@ -1,6 +1,6 @@
-import card from "./img/slider_img.png";
-import "./Home.scss";
-import { useState, useEffect } from 'react'
+
+import "./Home.scss"
+import { useRef ,useState, useEffect } from 'react'
 
 import spanner from "./img/spanner.svg";
 import arhitect from "./img/architect.svg";
@@ -12,25 +12,37 @@ import logo from "../../Shared/Images/logo.svg";
 import sliderIconRight from "./img/slider-right.svg";
 import sliderIconLeft from "./img/slider-left.svg";
 
-function Card() {
-    return (
-        <div className="slider-cards-card">
-            <img draggable="false" src={card} alt="card" />
-            <p className="slider-cards-card__date">дд мм гг</p>
-            <p className="slider-cards-card__name">Новости</p>
-        </div>
-    );
-}
-
-import { useRef } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
 import card1 from './img/slider/card1.png'
 import card2 from './img/slider/card2.png'
 import card3 from './img/slider/card3.png'
 import card4 from './img/slider/card4.png'
 import card5 from './img/slider/card5.png'
-function Slider({name}) {
+
+function Card({ type, img, date, text, pro, name }) {
+    return (
+        <div className="slider-cards-card">
+            <img draggable="false" src={img} className="slider-cards-card__img" />
+            {type === "news" ? (
+                <>
+                    <p className="slider-cards-card__date">{date}</p>
+                    <p className="slider-cards-card__text">{text}</p>
+                </>
+            ) : type === "team" ? (
+                <>
+                    <p className="slider-cards-card__name">{name}</p>
+                    <p className="slider-cards-card__pro">{pro}</p>
+                </>
+            ) : null}
+        </div>
+    );
+}
+
+
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+
+function Slider({ name, cards=[] }) {
     const swiperRef = useRef(null);
 
     const handlePrevSlide = () => {
@@ -58,14 +70,12 @@ function Slider({name}) {
             }
         };
 
-        // Устанавливаем количество слайдов при загрузке компонента
         updateSlidesPerView();
-
-        // Обновляем количество слайдов при изменении размера экрана
         window.addEventListener('resize', updateSlidesPerView);
 
         return () => window.removeEventListener('resize', updateSlidesPerView);
     }, []);
+
     return (
         <div className="padding">
             <div className="container">
@@ -93,45 +103,11 @@ function Slider({name}) {
                         slidesPerView={slidesPerView}
                         loop
                     >
-                        <SwiperSlide>
-                            <div className="slider-cards-card">
-                                <img draggable="false" className="slider-cards-card__img" src={card1} alt="card" />
-                                <p className="slider-cards-card__date">20.06.2024</p>
-                                <p className="slider-cards-card__name">USTA INTERNATIONAL стал официальным партнером международного двжижения "Один пояс и путь"
-
-                                </p>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="slider-cards-card">
-                                <img draggable="false" className="slider-cards-card__img" src={card2} alt="card" />
-                                <p className="slider-cards-card__date">30.07.2024</p>
-                                <p className="slider-cards-card__name">USTA INTERNATIONAL профинансировала сборную Кыргызстана по Digital Construction
-
-                                </p>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="slider-cards-card">
-                                <img draggable="false" className="slider-cards-card__img" src={card3} alt="card" />
-                                <p className="slider-cards-card__date">10.08.2024</p>
-                                <p className="slider-cards-card__name">Завершился первый "AEC Hakhaton" в г.Бишкек</p>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="slider-cards-card">
-                                <img draggable="false" className="slider-cards-card__img" src={card4} alt="card" />
-                                <p className="slider-cards-card__date">10.09.2024</p>
-                                <p className="slider-cards-card__name">USTA INTERNATIONAL и Кыргыз Жайты будут строить современные искусственные ледники</p>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="slider-cards-card">
-                                <img draggable="false" className="slider-cards-card__img" src={card5} alt="card" />
-                                <p className="slider-cards-card__date">01.10.2024</p>
-                                <p className="slider-cards-card__name">BIM в Кыргызстане</p>
-                            </div>
-                        </SwiperSlide>
+                        {cards.map((card, index) => (
+                            <SwiperSlide key={index}>
+                                <Card type={card.type} img={card.img} pro={card.pro} name={card.name} date={card.date} text={card.text} />
+                            </SwiperSlide>
+                        ))}
                     </Swiper>
                 </div>
             </div>
@@ -139,9 +115,8 @@ function Slider({name}) {
     );
 }
 
-export default Slider;
 
-function BigBlock({ head, img1, img2, img3, img4, subhead, subheadTag = "h1", p, btn }) {
+function BigBlock({ head, img1, img2, img3, img4, subhead, subheadTag = "h1", p, btn, URL }) {
     const SubheadTag = subheadTag; // Dynamic tag based on prop
 
     return (
@@ -157,11 +132,11 @@ function BigBlock({ head, img1, img2, img3, img4, subhead, subheadTag = "h1", p,
                     </div>
                     <div className="bigBlock-text">
                         <div>
-                            <SubheadTag>{subhead}</SubheadTag>
+                            <SubheadTag style={{ marginBlock: "0px", marginBlockStart: "0px", marginBlockEnd: "0px", margin: "0px" }}>{subhead}</SubheadTag>
                             <p dangerouslySetInnerHTML={{ __html: p }} />
                         </div>
                         {btn === "true" && (
-                            <div className="bigBlock-text-btn">ПОДРОБНЕЕ</div>
+                            <div className="bigBlock-text-btn"><a href={URL}>ПОДРОБНЕЕ</a></div>
                         )}
                     </div>
                 </div>
@@ -170,7 +145,7 @@ function BigBlock({ head, img1, img2, img3, img4, subhead, subheadTag = "h1", p,
     );
 }
 
-function BigBlockReverse({ head, img1, img2, img3, img4, subhead, subheadTag = "h1", p, btn }) {
+function BigBlockReverse({ head, img1, img2, img3, img4, subhead, subheadTag = "h1", p, btn, URL }) {
     const SubheadTag = subheadTag; // Dynamic tag based on prop
 
     return (
@@ -186,11 +161,11 @@ function BigBlockReverse({ head, img1, img2, img3, img4, subhead, subheadTag = "
                     </div>
                     <div className="bigBlock-text">
                         <div>
-                            <SubheadTag>{subhead}</SubheadTag>
+                            <SubheadTag style={{ marginBlock: "0px", marginBlockStart: "0px", marginBlockEnd: "0px", margin: "0px" }}>{subhead}</SubheadTag>
                             <p dangerouslySetInnerHTML={{ __html: p }} />
                         </div>
                         {btn === "true" && (
-                            <div className="bigBlock-text-btn">ПОДРОБНЕЕ</div>
+                            <div className="bigBlock-text-btn"><a href={URL}>ПОДРОБНЕЕ</a></div>
                         )}
                     </div>
                 </div>
@@ -200,7 +175,7 @@ function BigBlockReverse({ head, img1, img2, img3, img4, subhead, subheadTag = "
 }
 
 
-function InfoBlock({head, p, InfoImg}) {
+function InfoBlock({ head, p, InfoImg, URL }) {
     return (
         <div className="padding-100px">
             <div className="container">
@@ -211,7 +186,7 @@ function InfoBlock({head, p, InfoImg}) {
                     <div className="InfoBlock-text">
                         <h1>{head}</h1>
                         <p>{p}</p>
-                        <div className="InfoBlock-text-btn">ПОДРОБНЕЕ</div>
+                        <div className="InfoBlock-text-btn"><a href={URL}>ПОДРОБНЕЕ</a></div>
                     </div>
                 </div>
             </div>
@@ -219,7 +194,7 @@ function InfoBlock({head, p, InfoImg}) {
     );
 }
 
-function InfoBlockReverse({ head, p, InfoImg }) {
+function InfoBlockReverse({ head, p, InfoImg, URL }) {
     return (
         <div className="padding-100px">
             <div className="container">
@@ -234,7 +209,7 @@ function InfoBlockReverse({ head, p, InfoImg }) {
                         <h1 style={{ textAlign: "right" }}>{head}</h1>
                         <p style={{ textAlign: "right" }}>{p}</p>
                         <div className="InfoBlock-text-btn" style={{ textAlign: "right" }}>
-                            ПОДРОБНЕЕ
+                            <a href={URL}>ПОДРОБНЕЕ</a>
                         </div>
                     </div>
                 </div>
@@ -309,8 +284,8 @@ function PartnersTab() {
 }
 
 export {
-    Slider,
     Card,
+    Slider,
     BigBlock,
     BigBlockReverse,
     InfoBlock,

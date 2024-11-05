@@ -1,4 +1,5 @@
-import "./Home.scss";
+
+import './Home.scss'
 
 import {
     BigBlock,
@@ -35,7 +36,33 @@ import education from './img/Education.png'
 import community from './img/Community.png'
 import membership from './img/Membership.png'
 
+import card1 from './img/slider/card1.png'
+import card2 from './img/slider/card2.png'
+import card3 from './img/slider/card3.png'
+import card4 from './img/slider/card4.png'
+import card5 from './img/slider/card5.png'
+
+import team1 from './img/slider/team1.png'
+import team2 from './img/slider/team2.png'
+import team3 from './img/slider/team3.png'
+import team4 from './img/slider/team4.png'
+import team5 from './img/slider/team5.png'
+
 function Home() {
+    const cardDataNews = [
+        { type: "news", img: card1, date: "20.06.2024", text: "USTA INTERNATIONAL стал официальным партнером международного двжижения \"Один пояс и путь\"" },
+        { type: "news", img: card2, date: "30.07.2024", text: "USTA INTERNATIONAL профинансировала сборную Кыргызстана по Digital Construction" },
+        { type: "news", img: card3, date: "10.08.2024", text: "Завершился первый \"AEC Hakhaton\" в г.Бишкек" },
+        { type: "news", img: card4, date: "10.09.2024", text: "USTA INTERNATIONAL и Кыргыз Жайты будут строить современные искусственные ледники" },
+        { type: "news", img: card5, date: "01.10.2024", text: "BIM в Кыргызстане" },
+    ];
+    const cardDataTeam = [
+        { type: "team", img: team1, name: "ФИО", pro: "Должность" },
+        { type: "team", img: team2, name: "ФИО", pro: "Должность" },
+        { type: "team", img: team3, name: "ФИО", pro: "Должность" },
+        { type: "team", img: team4, name: "ФИО", pro: "Должность" },
+        { type: "team", img: team5, name: "ФИО", pro: "Должность" },
+    ]
     return (
         <div className="home">
             <div className="main-screen">
@@ -58,7 +85,7 @@ function Home() {
                 </div>
             </div>
             <Slider
-            name=""/>
+                name="Новости" cards={cardDataNews}/>
             <ServicesTab />
             <PartnersTab />
             <BigBlock
@@ -81,6 +108,7 @@ function Home() {
         Наши партнеры — это компании с сильной репутацией, которые разделяют наши ценности. Вместе с ними мы создаем продукцию и оказываем услуги, которыми гордимся и которые ценят наши клиенты.
         `}
                 btn="true"
+                URL="/events"
             />
 
             <BigBlockReverse
@@ -100,7 +128,9 @@ function Home() {
         Качество и Ответственность<br>
         Мы понимаем, что каждый этап производства — это шаг к конечному продукту, поэтому выбираем только тех поставщиков, кто доказал свою надежность и ответственность. Мы регулярно проверяем качество поставляемой продукции, чтобы быть уверенными в том, что наши стандарты не только соблюдаются, но и превосходятся. Наши клиенты доверяют нам, а мы — нашим поставщикам.
         `}
-                btn="true" />
+                btn="true"
+                URL="/participation"
+            />
             <BigBlock
                 head="УСТОЙЧИВОЕ РАЗВИТИЕ"
                 img1={mission1}
@@ -140,32 +170,38 @@ function Home() {
             <li>Поддержка местных сообществ и компаний в преодолении технологических, и нормативно-техниских барьеров</li>
         </ul>
         `}
-                btn="false" />
-            <Slider name="НАША КОМАНДА"/>
+                btn="false"
+            />
+            <Slider name="НАША КОМАНДА" cards={cardDataTeam} />/>
             <InfoBlock
                 head="АМБАССАДОРСТВО"
                 p="Наша компания тщательно выбирает партнеров, чтобы обеспечить вас лучшими товарами и услугами. Мы работаем только с проверенными поставщиками, которые разделяют наши ценности в отношении качества, надежности и оперативности."
                 InfoImg={ambassadorship}
+                URL="/ambassadorship"
             />
             <InfoBlockReverse
                 head="ОБРАЗОВАНИЕ"
                 p="Если вы готовы стать частью нашей команды надежных партнеров, мы открыты для новых предложений! Мы ищем тех, кто готов предложить инновационные решения и стабильные поставки. Отправьте свое предложение через форму ниже, и мы свяжемся с вами для обсуждения условий сотрудничества."
                 InfoImg={education}
+                URL="/education"
             />
             <InfoBlock
                 head="О СООБЩЕСТВЕ"
                 p="Наши магазины — это не просто торговые точки, а thoughtfully designed spaces, где каждая деталь продумана для вашего комфорта. Мы заботимся о том, чтобы архитектурные решения гармонично сочетались с функциональностью. Просторные залы, продуманное освещение и современный дизайн создают атмосферу, в которой приятно находиться. Наши магазины — это образец продуманного строительства, где качество обслуживания сочетается с эстетикой пространства."
                 InfoImg={community}
+                URL="/community"
             />
             <InfoBlockReverse
                 head="ЧЛЕНСТВО"
                 p="Наши техники — это профессионалы, которые воплощают в жизнь самые сложные инженерные и строительные задачи. Благодаря их опыту и вниманию к деталям, каждый проект реализуется на высочайшем уровне. Современные технологии и новейшие инструменты позволяют им обеспечивать надежность, долговечность и качество на каждом этапе работы. Техники — это те, кто стоит за каждым успешным проектом, создавая будущее с точностью и мастерством."
                 InfoImg={membership}
+                URL="/membership"
             />
             <InfoBlock
                 head="УСЛУГИ"
                 p="Мы всегда в поиске талантливых и целеустремленных людей, готовых расти и развиваться вместе с нами. Если вы хотите работать в компании, где ценят инициативу, профессионализм и командный дух, у нас для вас есть отличные возможности. Мы предлагаем разнообразные вакансии в разных сферах и обеспечиваем комфортные условия для карьерного роста. Присоединяйтесь к нам, чтобы вместе создавать будущее!"
                 InfoImg={membership}
+                URL="/services"
             />
         </div>
     );
