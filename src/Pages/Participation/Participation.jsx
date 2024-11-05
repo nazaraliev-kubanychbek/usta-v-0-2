@@ -1,5 +1,5 @@
 import './Participation.scss';
-import img from "./imgs/Rectangle 88.png"; import img3 from "./imgs/Rectangle 88 (2).png";
+import img from "./imgs/Rectangle 88.png"; import img3 from "./imgs/Rectangle 88 (2).png"; // ПРОИМЕНОВАТЬ КАЖДУЮ КАРТИНКУ
 import img2 from "./imgs/Rectangle 88 (1).png";  import img4 from "./imgs/Rectangle 88 (3).png";
 import img5 from "./imgs/Rectangle 284 (8).png";  import img7 from "./imgs/Rectangle 284 (10).png";
 import img6 from "./imgs/Rectangle 284 (9).png";  import img8 from "./imgs/Rectangle 284 (11).png";
