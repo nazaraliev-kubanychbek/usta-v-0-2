@@ -96,7 +96,7 @@ const Events = () => {
           <div className='video-content-container-2'>
             <div className='text-video2'> 
               <h1 className='title-text-video2'>Lorem ipsum dolor sit amet consectetur.</h1>
-              <p className='text-video2'>
+              <p className='text-video3'>
                 Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim. 
                 Praesent turpis odio rutrum platea egestas duis turpis nunc. 
                 Non vitae ac risus molestie tristique molestie enim volutpat. 
