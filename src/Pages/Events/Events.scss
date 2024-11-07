@@ -198,9 +198,9 @@ body {
             max-width: 720px;
         }
 
-        li:nth-child(4) {
-            display: none; 
-        }
+        // li:nth-child(4) {
+        //     display: none; 
+        // }
 
         li {
             width: calc(100% / 3 - 10px); 
@@ -300,9 +300,9 @@ body {
      margin: -200px 0 0 0;
      padding-bottom: 15px;  
      @media screen and (max-width: 992px){
-      color: black;
-      transform: translate(10px,200px);
-      font-size: 24px;
+      color: rgb(234, 14, 14);
+      transform: translate(75px,203px);
+      font-size: 18px;
       font-family: Helvetica;
      }
   }
@@ -316,9 +316,13 @@ body {
     color: rgba(0, 0, 0, 0.9);
     margin-bottom: 15px;
     @media screen and (max-width: 992px){
+      font-family: Helvetica;
+      width: 420px;
       color: rgb(132, 118, 118);
-      transform: translate(-30px,220px,);
+      transform: translate(15px,220px,);
       font-size: 17px;
+      margin-top: -30px;
+      
      }
 }
 }
@@ -386,6 +390,9 @@ body {
           height: 200px; // Фиксированная высота для изображений
           border-radius: 0; // Убираем закругление углов
       }
+  }
+  @media screen and (max-width: 768px){
+    width: 900px;
   }
 }
 
@@ -484,7 +491,8 @@ body {
     
     // Адаптивные стили
     @media screen and (max-width: 992px) {
-        width: 350px; // Устанавливаем ширину на 100% для адаптации под экран
+        width: 467px; // Устанавливаем ширину на 100% для адаптации под экран
+        height: 286px;
         max-width: 910px; // Убираем максимальную ширину
     }
 }
@@ -500,7 +508,10 @@ body {
   background-image: url('./images/Rectangle 999.png');
   padding: 70px 75px 150px;
   gap: 40px;
-  margin-bottom: 100px;   
+  margin-bottom: 100px;  
+  @media screen and (max-width: 768px) {
+    width: 100vh;
+} 
 }
 .event-text h1{
 font-family: Helvetica;
@@ -511,6 +522,9 @@ letter-spacing: -0.04em;
 text-align: left;
 color:black;
 margin-bottom: 10px;
+@media screen and (max-width: 768px) {
+  margin-left: 10px;
+}
 }
 .event-text h2 {
   font-family: Helvetica;
@@ -522,6 +536,9 @@ margin-bottom: 10px;
   color: #00000080;
   max-width: 640px;   
   margin-bottom: 40px;
+  @media screen and (max-width: 768px) {
+    margin-left: 14px;
+  }
 }
 
 
@@ -533,9 +550,12 @@ font-family: Helvetica;
   text-align: left;
   color: rgba(72, 54, 54, 0.9);  
   @media screen and (max-width: 992px){
-    transform: translate(360px);
+    width: 400px;
+    margin-top: -80px;
+    transform: translate(500px);
     font-size: 17px;
     line-height: 18.7px;
+    size: 17px;
   } 
 }
 
@@ -545,9 +565,9 @@ max-width: 910px; // или другой размер, если необходи
 
 // Адаптивные стили
 @media screen and (max-width: 992px) {
-    width: 330px; // Устанавливаем ширину на 350px для адаптации под экран
+    width: 467px; // Устанавливаем ширину на 350px для адаптации под экран
     max-width: 100%; // Устанавливаем максимальную ширину на 100%
-    margin-left: 380px;
+    margin-left: 450px;
 }
 }
 .title-text-video1 {
@@ -558,11 +578,11 @@ color: #000;
 margin: -200px 0 0 0;
 padding-bottom: 15px;
 @media screen and (max-width: 992px){
-  color: black;
-  font-size: 24px;
+  color: red;
+  font-size: 18px;
   // margin-left: 400px;
   padding-bottom: 0px;
-  transform: translate(360px,-20px);
+  transform: translate(500px,-90px);
 }
 }
 
@@ -570,6 +590,27 @@ padding-bottom: 15px;
 
 @media screen and (max-width: 992px) {
 .text-video2 {
-transform: translateX(-100px);
 }
+}
+
+
+
+
+.event-section {
+  @media screen and (max-width: 768px) {
+    .images {
+      width: 890px;
+      display: flex;
+      overflow-x: auto; /* Добавляем горизонтальный скролл */
+      -webkit-overflow-scrolling: touch; /* Плавный скролл для мобильных устройств */
+      padding-bottom: 10px; /* Небольшое пространство внизу для скролла */
+    }
+
+    .images li {
+      width: 500px; /* Ширина для каждого элемента (можно настроить) */
+      margin-right: -160px; /* Отступ между элементами */
+      margin-left: 20px;
+      flex: 0 0 auto; /* Устанавливаем фиксированную ширину для прокрутки */
+    }
+  }
 }
