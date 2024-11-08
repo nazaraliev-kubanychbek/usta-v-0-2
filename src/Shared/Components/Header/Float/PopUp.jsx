@@ -1,30 +1,32 @@
-
 import './styles/popup.scss'
-import logo1 from '../../assets/logo-popup-1.png';
-import logo2 from '../../assets/logo-popup-2.png';
-import logo3 from '../../assets/logo-popup-3.png';
-import logo4 from '../../assets/logo-popup-4.png';
-const PopUp = () => {
-    return (
-        <div className='container-for-popup'>
-            <p className='h1-popup'>через социальные cети:</p>
 
-            <div className="container-loc">
-                <button className="popup-btn">
-                    <img className='logo-popup' src={logo1} alt="!#" />
-                    <p className='text-popup'>Telegram</p>
+import instagram from '../../../Images/social/instagram.png'
+import linkedin from '../../../Images/social/linkedin.png'
+import telegram from '../../../Images/social/telegram.png'
+import youtube from '../../../Images/social/YouTube.png'
+
+const PopUp = () => {
+    //const popup = document.getElementById(popup);
+    return (
+        <div id="popup" className='popup'>
+            <p className='popup-h1'>через социальные cети:</p>
+
+            <div className="popup-container">
+                <button className="popup-container-btn">
+                    <img className='popup-container-logo' src={telegram} alt="!#" />
+                    <p className='popup-container-text'>Telegram</p>
                 </button>
-                <button className="popup-btn">
-                    <img className='logo-popup' src={logo2} alt="!#" />
-                    <p className='text-popup'>Instagram</p>
+                <button className="popup-container-btn">
+                    <img className='popup-container-logo' src={instagram} alt="!#" />
+                    <p className='popup-container-text'>Instagram</p>
                 </button>
-                <button className="popup-btn">
-                    <img className='logo-popup' src={logo3} alt="!#" />
-                    <p className='text-popup'>Linkeding</p>
+                <button className="popup-container-btn">
+                    <img className='popup-container-logo' src={linkedin} alt="!#" />
+                    <p className='popup-container-text'>Linkeding</p>
                 </button>
-                <button className="popup-btn">
-                    <img className='logo-popup' src={logo4} alt="!#" />
-                    <p className='text-popup'>Youtube</p>
+                <button className="popup-container-btn">
+                    <img className='popup-container-logo' src={youtube} alt="!#" />
+                    <p className='popup-container-text'>Youtube</p>
                 </button>
             </div>
         </div>

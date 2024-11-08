@@ -1,5 +1,5 @@
 
-import './Home.scss'
+import './1920px.scss'
 
 import {
     BigBlock,
@@ -80,7 +80,6 @@ function Home() {
                             области инфраструктуры, энергетики и экологии, а также
                             способствуем глобальному партнерству для устойчивого развития&quot;
                         </div>
-                        <div className="main-screen-btn">ПРИСОЕДИНИТЬСЯ</div>
                     </div>
                 </div>
             </div>

@@ -38,12 +38,19 @@ function Card({ type, img, date, text, pro, name }) {
 }
 
 
+import { useNavigate } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
 
-function Slider({ name, cards=[] }) {
+function Slider({ name, cards = [] }) {
+    const navigate = useNavigate();
     const swiperRef = useRef(null);
+    const [slidesPerView, setSlidesPerView] = useState(4);
+
+    const handleCardClick = (id) => {
+        navigate(`/news/${id}`);
+    };
 
     const handlePrevSlide = () => {
         if (swiperRef.current) swiperRef.current.swiper.slidePrev();
@@ -52,8 +59,6 @@ function Slider({ name, cards=[] }) {
     const handleNextSlide = () => {
         if (swiperRef.current) swiperRef.current.swiper.slideNext();
     };
-
-    const [slidesPerView, setSlidesPerView] = useState(4);
 
     useEffect(() => {
         const updateSlidesPerView = () => {
@@ -71,9 +76,9 @@ function Slider({ name, cards=[] }) {
         };
 
         updateSlidesPerView();
-        window.addEventListener('resize', updateSlidesPerView);
+        window.addEventListener("resize", updateSlidesPerView);
 
-        return () => window.removeEventListener('resize', updateSlidesPerView);
+        return () => window.removeEventListener("resize", updateSlidesPerView);
     }, []);
 
     return (
@@ -105,7 +110,16 @@ function Slider({ name, cards=[] }) {
                     >
                         {cards.map((card, index) => (
                             <SwiperSlide key={index}>
-                                <Card type={card.type} img={card.img} pro={card.pro} name={card.name} date={card.date} text={card.text} />
+                                <div onClick={() => handleCardClick(index)}>
+                                    <Card
+                                        type={card.type}
+                                        img={card.img}
+                                        pro={card.pro}
+                                        name={card.name}
+                                        date={card.date}
+                                        text={card.text}
+                                    />
+                                </div>
                             </SwiperSlide>
                         ))}
                     </Swiper>
@@ -114,6 +128,9 @@ function Slider({ name, cards=[] }) {
         </div>
     );
 }
+
+export default Slider;
+
 
 
 function BigBlock({ head, img1, img2, img3, img4, subhead, subheadTag = "h1", p, btn, URL }) {

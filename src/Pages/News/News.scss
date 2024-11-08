@@ -1,0 +1,141 @@
+.News {
+    margin-top: 228px;
+
+    &-date {
+        //styleName: Desktop Типографика/Заголовок 5;
+        font-family: Helvetica;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: -0.04em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        opacity: 40%;
+    }
+
+    &-head {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 80px;
+
+        &-header {
+            //styleName: Desktop Типографика/Заголовок 2;
+
+            font-family: Helvetica;
+            font-size: 50px;
+            font-weight: 700;
+            line-height: 50px;
+            letter-spacing: -0.06em;
+            text-align: left;
+        }
+    }
+
+    &-content {
+        display: flex;
+        gap: 20px;
+
+        img {
+            width: 640px;
+            height: 420px;
+        }
+
+        &-text {
+            font-family: Helvetica;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 21.6px;
+            letter-spacing: -0.04em;
+            text-align: left;
+        }
+    }
+}
+
+.slider {
+    &-row {
+        display: flex;
+        justify-content: space-between;
+
+        &-name {
+            padding-top: 9px;
+            padding-bottom: 17px;
+            font-family: Helvetica;
+            font-size: 50px;
+            font-weight: 700;
+            line-height: 50px;
+            letter-spacing: -0.06em;
+            text-align: left;
+        }
+
+        .slider-btn {
+            width: 136px;
+            display: flex;
+
+            img {
+                cursor: pointer;
+                transition: filter 0.15s;
+
+                &.clicked {
+                    filter: grayscale(100%);
+                }
+            }
+        }
+    }
+
+    &-cards {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+
+        &-card {
+            padding-top: 40px;
+
+            &__img {
+                width: 310px;
+                height: 240px;
+                border-radius: 20px;
+                object-fit: cover;
+            }
+
+            &__date {
+                font-family: Helvetica;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: -0.04em;
+                text-align: left;
+                opacity: 40%;
+                padding: 10px 0px;
+            }
+
+            &__text {
+                font-family: Helvetica;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 17.6px;
+                letter-spacing: -0.04em;
+                text-align: left;
+            }
+
+            &__pro {
+                font-family: Helvetica;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 21.6px;
+                letter-spacing: -0.04em;
+                text-align: left;
+                opacity: 50%;
+                padding: 10px 0px;
+            }
+
+            &__name {
+                font-family: Helvetica;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 21.6px;
+                letter-spacing: -0.04em;
+                text-align: left;
+            }
+        }
+    }
+}

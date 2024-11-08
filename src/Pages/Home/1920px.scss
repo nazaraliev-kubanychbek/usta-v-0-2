@@ -1,4 +1,4 @@
-@media (max-width="1920px") {
+@media screen and (max-width: 1920px) {
     .home {
         .main-screen {
             // position: fixed;
@@ -11,10 +11,24 @@
             height: 100vh;
             background-image: url(../../Shared/Images/image-bg.png);
             padding: 70px 75px 150px;
+            background-repeat: round;
             gap: 40px;
 
+            &-head {
+                height: auto;
+                width: 70%;
+                color: white;
+                font-family: Helvetica;
+                font-size: 60px;
+                font-weight: 400;
+                line-height: 60px;
+                letter-spacing: -0.04em;
+                text-align: left;
+                margin-bottom: 20px;
+            }
+
             &-text {
-                height: 100px;
+                height: auto;
                 width: 70%;
                 color: white;
                 font-family: Helvetica;
@@ -23,6 +37,7 @@
                 line-height: 20px;
                 letter-spacing: -0.04em;
                 text-align: left;
+                margin-bottom: 40px;
             }
 
             &-btn {
@@ -49,17 +64,25 @@
                     padding-top: 9px;
                     padding-bottom: 17px;
                     font-family: Helvetica;
-                    font-size: 30px;
-                    font-weight: 400;
-                    line-height: 32.4px;
-                    letter-spacing: -0.04em;
+                    font-size: 50px;
+                    font-weight: 700;
+                    line-height: 50px;
+                    letter-spacing: -0.06em;
                     text-align: left;
-                    opacity: 50%;
                 }
 
-                &-btn {
+                .slider-btn {
                     width: 136px;
                     display: flex;
+
+                    img {
+                        cursor: pointer;
+                        transition: filter 0.15s;
+
+                        &.clicked {
+                            filter: grayscale(100%);
+                        }
+                    }
                 }
             }
 
@@ -69,7 +92,14 @@
                 justify-content: center;
 
                 &-card {
-                    padding-top: 32px;
+                    padding-top: 40px;
+
+                    &__img {
+                        width: 310px;
+                        height: 240px;
+                        border-radius: 20px;
+                        object-fit: cover;
+                    }
 
                     &__date {
                         font-family: Helvetica;
@@ -82,11 +112,31 @@
                         padding: 10px 0px;
                     }
 
+                    &__text {
+                        font-family: Helvetica;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 17.6px;
+                        letter-spacing: -0.04em;
+                        text-align: left;
+                    }
+
+                    &__pro {
+                        font-family: Helvetica;
+                        font-size: 20px;
+                        font-weight: 400;
+                        line-height: 21.6px;
+                        letter-spacing: -0.04em;
+                        text-align: left;
+                        opacity: 50%;
+                        padding: 10px 0px;
+                    }
+
                     &__name {
                         font-family: Helvetica;
                         font-size: 20px;
                         font-weight: 400;
-                        line-height: 20px;
+                        line-height: 21.6px;
                         letter-spacing: -0.04em;
                         text-align: left;
                     }
@@ -101,7 +151,7 @@
             &-images {
                 display: flex;
                 flex-wrap: wrap;
-                width: 660px;
+                width: 640px;
                 gap: 20px;
             }
 
@@ -112,27 +162,51 @@
                 flex-direction: column;
                 justify-content: space-between;
 
-                h1 {
+                &-head {
                     font-family: Helvetica;
-                    font-size: 50px;
+                    font-size: 40px;
                     font-weight: 400;
-                    line-height: 50px;
+                    line-height: 40px;
                     letter-spacing: -0.04em;
                     text-align: left;
-                    margin-bottom: 40px;
+                    margin-bottom: 45px;
                 }
 
-                p {
-                    font-family: Helvetica;
-                    font-size: 18px;
-                    font-weight: 400;
-                    line-height: 19.8px;
-                    letter-spacing: -0.04em;
-                    text-align: left;
-                    opacity: 50%;
+                div {
 
-                    ul {
-                        padding: 0px 20px;
+
+
+                    h1 {
+                        font-family: Helvetica;
+                        font-size: 40px;
+                        font-weight: 400;
+                        line-height: 40px;
+                        letter-spacing: -0.04em;
+                        text-align: left;
+                    }
+
+                    h3 {
+                        font-family: Helvetica;
+                        font-size: 24px;
+                        font-weight: 700;
+                        line-height: 26.4px;
+                        letter-spacing: -0.04em;
+                        text-align: left;
+                    }
+
+                    p {
+                        margin-top: 20px;
+                        font-family: Helvetica;
+                        font-size: 18px;
+                        font-weight: 400;
+                        line-height: 19.8px;
+                        letter-spacing: -0.04em;
+                        text-align: left;
+                        opacity: 50%;
+
+                        ul {
+                            padding: 0px 20px;
+                        }
                     }
                 }
 
@@ -142,8 +216,17 @@
                     font-weight: 400;
                     line-height: 20px;
                     letter-spacing: -0.04em;
-                    text-align: right;
+                    text-align: left;
+                    text-decoration: none;
+                    text-decoration-color: black;
                     text-decoration: underline 2px;
+                    color: #000;
+
+                    &:hover,
+                    &:visited,
+                    &:active {
+                        color: black;
+                    }
                 }
             }
         }
@@ -170,6 +253,7 @@
                     line-height: 60px;
                     letter-spacing: -0.04em;
                     text-align: left;
+                    margin-top: -6px;
                 }
 
                 p {
@@ -189,7 +273,16 @@
                     line-height: 20px;
                     letter-spacing: -0.04em;
                     text-align: left;
+                    text-decoration: none;
+                    text-decoration-color: black;
                     text-decoration: underline 2px;
+                    color: #000;
+
+                    &:hover,
+                    &:visited,
+                    &:active {
+                        color: black;
+                    }
                 }
             }
         }

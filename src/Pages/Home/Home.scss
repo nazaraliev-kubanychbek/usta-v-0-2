@@ -70,9 +70,18 @@
                 text-align: left;
             }
 
-            &-btn {
+            .slider-btn {
                 width: 136px;
                 display: flex;
+
+                img {
+                    cursor: pointer;
+                    transition: filter 0.15s;
+                    
+                    &.clicked {
+                        filter: grayscale(100%);
+                    }
+                }
             }
         }
 
@@ -88,7 +97,7 @@
                     width: 310px;
                     height: 240px;
                     border-radius: 20px;
-                    object-fit:cover;
+                    object-fit: cover;
                 }
 
                 &__date {

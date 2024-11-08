@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./Header.scss";
 import { NavLink, useLocation } from "react-router-dom";
 import Logo from "../../Images/logo.svg";
-
+//import PopUp from './Float/PopUp'
 function Header() {
     const [scrolled, setScrolled] = useState(false);
     const location = useLocation();
@@ -47,104 +47,103 @@ function Header() {
         window.scrollTo(0, 0);
     }, [location]);
 
+
     return (
-        <div className={`Header ${scrolled ? "Header-scrolled" : ""}`}>
-            <div className="container row">
-                {!scrolled ? (
-                    <>
-                        <div className="Header-topline">
-                            <div className="Header-topline__logo">
-                                <img src={Logo} alt="Logo" />
-                            </div>
-                            <div className="Header-topline__options">
-                                <div className="Header-topline__options-btn">
-                                    Свяжитесь с нами
+        <div className="container">
+            <div className={`Header ${scrolled ? "Header-scrolled" : ""}`}>
+                <div className="row">
+                    {!scrolled ? (
+                        <>
+                            <div className="Header-topline">
+                                <div className="Header-topline__logo">
+                                    <img src={Logo} alt="Logo" />
                                 </div>
-                            </div>
-                        </div>
-                        <nav>
-                            <ul>
-                                <li>
-                                    <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/">Главное</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/community">О сообществе</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/events">Мероприятие</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/membership">Членство</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/education">Образование и сертификаты</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/services">Услуги</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/ambassadorship">Амбассадорство</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/participation">Участие в проектах</NavLink>
-                                </li>
-                                <li>
-                                    <button className="" onClick={() => scrollToBottom(500)}>
-                                        Контакты
-                                    </button>
-                                </li>
-                            </ul>
-                        </nav>
-                    </>
-                ) : (
-                    <>
-                        <div className="Header-scrolled-topline__logo">
-                            <img src={Logo} alt="Logo" />
-                        </div>
-                        <div className="Header-scrolled-elements">
-                            <div className="Header-scrolled-topline">
-                                <div className="Header-scrolled-topline__options">
-                                    <div className="Header-scrolled-topline__options-btn">
+                                <div className="Header-topline__options">
+                                    <button className="Header-topline__options-btn" >
                                         Свяжитесь с нами
-                                    </div>
+                                    </button>
                                 </div>
                             </div>
                             <nav>
                                 <ul>
                                     <li>
-                                            <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/">Главное</NavLink>
+                                        <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/">Главное</NavLink>
                                     </li>
                                     <li>
-                                            <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/community">О сообществе</NavLink>
+                                        <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/community">О сообществе</NavLink>
                                     </li>
                                     <li>
-                                            <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/events">Мероприятие</NavLink>
+                                        <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/events">Мероприятие</NavLink>
                                     </li>
                                     <li>
-                                            <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/membership">Членство</NavLink>
+                                        <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/membership">Членство</NavLink>
                                     </li>
                                     <li>
-                                            <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/education">Образование и сертификаты</NavLink>
+                                        <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/education">Образование и сертификаты</NavLink>
                                     </li>
                                     <li>
-                                            <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/services">Услуги</NavLink>
+                                        <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/services">Услуги</NavLink>
                                     </li>
                                     <li>
-                                            <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/ambassadorship">Амбассадорство</NavLink>
+                                        <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/ambassadorship">Амбассадорство</NavLink>
                                     </li>
                                     <li>
-                                            <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/participation">Участие в проектах</NavLink>
+                                        <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/participation">Участие в проектах</NavLink>
                                     </li>
                                     <li>
-                                        <button onClick={() => scrollToBottom(500)}>
-                                            Контакты
-                                        </button>
+                                        <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/contacts">Контакты</NavLink>
                                     </li>
                                 </ul>
                             </nav>
-                        </div>
-                    </>
-                )}
+                        </>
+                    ) : (
+                        <>
+                            <div className="Header-scrolled-topline__logo">
+                                <img src={Logo} alt="Logo" />
+                            </div>
+                            <div className="Header-scrolled-elements">
+                                <div className="Header-scrolled-topline">
+                                    <div className="Header-scrolled-topline__options">
+                                        <div className="Header-scrolled-topline__options-btn">
+                                            Свяжитесь с нами
+                                        </div>
+                                    </div>
+                                </div>
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/">Главное</NavLink>
+                                        </li>
+                                        <li>
+                                            <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/community">О сообществе</NavLink>
+                                        </li>
+                                        <li>
+                                            <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/events">Мероприятие</NavLink>
+                                        </li>
+                                        <li>
+                                            <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/membership">Членство</NavLink>
+                                        </li>
+                                        <li>
+                                            <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/education">Образование и сертификаты</NavLink>
+                                        </li>
+                                        <li>
+                                            <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/services">Услуги</NavLink>
+                                        </li>
+                                        <li>
+                                            <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/ambassadorship">Амбассадорство</NavLink>
+                                        </li>
+                                        <li>
+                                            <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/participation">Участие в проектах</NavLink>
+                                        </li>
+                                        <li>
+                                            <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to="/contacts">Контакты</NavLink>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </>
+                    )}
+                </div>
             </div>
         </div>
     );
