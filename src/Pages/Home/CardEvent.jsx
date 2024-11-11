@@ -1,6 +1,7 @@
+import './Home.scss'
 
-import "./Home.scss"
-import { useRef ,useState, useEffect } from 'react'
+
+import { useRef, useState, useEffect } from 'react'
 
 import spanner from "./img/spanner.svg";
 import arhitect from "./img/architect.svg";
@@ -102,13 +103,15 @@ function Slider({ name, cards = [] }) {
                             />
                         </div>
                     </div>
-                    <Swiper
+                    <Swiper className="slider-cards"
                         ref={swiperRef}
                         spaceBetween={30}
                         slidesPerView={slidesPerView}
                         loop
                     >
+
                         {cards.map((card, index) => (
+
                             <SwiperSlide key={index}>
                                 <div onClick={() => handleCardClick(index)}>
                                     <Card
@@ -120,8 +123,11 @@ function Slider({ name, cards = [] }) {
                                         text={card.text}
                                     />
                                 </div>
+
                             </SwiperSlide>
+
                         ))}
+
                     </Swiper>
                 </div>
             </div>
@@ -162,6 +168,63 @@ function BigBlock({ head, img1, img2, img3, img4, subhead, subheadTag = "h1", p,
     );
 }
 
+function BigBlockAlt({ head, img1, img2, img3, img4, subhead, subheadTag = "h1", p, btn, URL }) {
+    const SubheadTag = subheadTag; // Dynamic tag based on prop
+
+    return (
+        <div className="padding-100px">
+            <div className="container">
+                <h1 className="bigBlock-text-head">{head}</h1>
+                <div className="bigBlock">
+                    <div className="bigBlock-imagesAlt">
+                        {img1 && <img src={img1} alt="big block image 1" />}
+                        {img2 && <img src={img2} alt="big block image 2" />}
+                        {img3 && <img src={img3} alt="big block image 3" />}
+                        {img4 && <img src={img4} alt="big block image 4" />}
+                    </div>
+                    <div className="bigBlock-text-alt">
+                        <div>
+                            <SubheadTag style={{ marginBlock: "0px", marginBlockStart: "0px", marginBlockEnd: "0px", margin: "0px" }}>{subhead}</SubheadTag>
+                            <p dangerouslySetInnerHTML={{ __html: p }} />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                        </div>
+                        {btn === "true" && (
+                            <div className="bigBlock-text-btn"><a href={URL}>ПОДРОБНЕЕ</a></div>
+                        )}
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+function BigBlockAltReverse({ head, img1, img2, img3, img4, subhead, subheadTag = "h1", p, btn, URL }) {
+    const SubheadTag = subheadTag; // Dynamic tag based on prop
+
+    return (
+        <div className="padding-100px">
+            <div className="container">
+                <h1 className="bigBlock-text-head">{head}</h1>
+                <div className="bigBlock reverse">
+                    <div className="bigBlock-imagesAlt">
+                        {img1 && <img src={img1} alt="big block image 1" />}
+                        {img2 && <img src={img2} alt="big block image 2" />}
+                        {img3 && <img src={img3} alt="big block image 3" />}
+                        {img4 && <img src={img4} alt="big block image 4" />}
+                    </div>
+                    <div className="bigBlock-text-alt">
+                        <div>
+                            <SubheadTag style={{ marginBlock: "0px", marginBlockStart: "0px", marginBlockEnd: "0px", margin: "0px" }}>{subhead}</SubheadTag>
+                            <p dangerouslySetInnerHTML={{ __html: p }} />
+                        </div>
+                        {btn === "true" && (
+                            <div className="bigBlock-text-btn"><a href={URL}>ПОДРОБНЕЕ</a></div>
+                        )}
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
 function BigBlockReverse({ head, img1, img2, img3, img4, subhead, subheadTag = "h1", p, btn, URL }) {
     const SubheadTag = subheadTag; // Dynamic tag based on prop
 
@@ -169,7 +232,7 @@ function BigBlockReverse({ head, img1, img2, img3, img4, subhead, subheadTag = "
         <div className="padding-100px">
             <div className="container">
                 <h1 className="bigBlock-text-head">{head}</h1>
-                <div className="bigBlock" style={{ flexDirection: "row-reverse" }}>
+                <div className="bigBlock reverse">
                     <div className="bigBlock-images">
                         {img1 && <img src={img1} alt="big block image 1" />}
                         {img2 && <img src={img2} alt="big block image 2" />}
@@ -265,34 +328,57 @@ function ServicesTab() {
     );
 }
 
-function PartnersTab() {
+function Partners({ img }) {
+    return (
+        <div className="Partners-list-partners">
+            <img src={img} alt="Partner logo" />
+        </div>
+    );
+}
+
+function PartnersTab({ partners = [] }) {
+    const [PartnersPerView, setPartnersPerView] = useState(7);
+    const swiperRef = useRef(null);
+
+    useEffect(() => {
+        const updatePartnersPerView = () => {
+            const width = window.innerWidth;
+
+            if (width < 600) {
+                setPartnersPerView(2);
+            } else if (width < 1024) {
+                setPartnersPerView(4);
+            } else if (width < 1400) {
+                setPartnersPerView(5);
+            } else {
+                setPartnersPerView(7);
+            }
+        };
+
+        updatePartnersPerView();
+        window.addEventListener("resize", updatePartnersPerView);
+
+        return () => window.removeEventListener("resize", updatePartnersPerView);
+    }, []);
+
     return (
         <div className="padding">
             <div className="container">
                 <div className="Partners">
                     <h1>ПАРТНЕРЫ</h1>
                     <div className="Partners-list">
-                        <div className="Partners-list-partners">
-                            <img src={logo} />
-                        </div>
-                        <div className="Partners-list-partners">
-                            <img src={logo} />
-                        </div>
-                        <div className="Partners-list-partners">
-                            <img src={logo} />
-                        </div>
-                        <div className="Partners-list-partners">
-                            <img src={logo} />
-                        </div>
-                        <div className="Partners-list-partners">
-                            <img src={logo} />
-                        </div>
-                        <div className="Partners-list-partners">
-                            <img src={logo} />
-                        </div>
-                        <div className="Partners-list-partners">
-                            <img src={logo} />
-                        </div>
+                        <Swiper
+                            ref={swiperRef}
+                            spaceBetween={20}
+                            slidesPerView={PartnersPerView}
+                            loop
+                        >
+                            {partners.map((partner, index) => (
+                                <SwiperSlide key={index}>
+                                    <Partners img={partner.img} />
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
                     </div>
                 </div>
             </div>
@@ -304,9 +390,12 @@ export {
     Card,
     Slider,
     BigBlock,
+    BigBlockAlt,
+    BigBlockAltReverse,
     BigBlockReverse,
     InfoBlock,
     InfoBlockReverse,
     ServicesTab,
+    Partners,
     PartnersTab,
 };

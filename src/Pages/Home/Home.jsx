@@ -1,9 +1,11 @@
+import './Home.scss'
 
-import './1920px.scss'
 
 import {
     BigBlock,
+    BigBlockAlt,
     BigBlockReverse,
+    BigBlockAltReverse,
     InfoBlock,
     InfoBlockReverse,
     ServicesTab,
@@ -48,6 +50,8 @@ import team3 from './img/slider/team3.png'
 import team4 from './img/slider/team4.png'
 import team5 from './img/slider/team5.png'
 
+import logo from '../../Shared/Images/logo.png'
+
 function Home() {
     const cardDataNews = [
         { type: "news", img: card1, date: "20.06.2024", text: "USTA INTERNATIONAL стал официальным партнером международного двжижения \"Один пояс и путь\"" },
@@ -63,6 +67,18 @@ function Home() {
         { type: "team", img: team4, name: "ФИО", pro: "Должность" },
         { type: "team", img: team5, name: "ФИО", pro: "Должность" },
     ]
+    const partners = [
+        { img: logo },
+        { img: logo },
+        { img: logo },
+        { img: logo },
+        { img: logo },
+        { img: logo },
+        { img: logo },
+        { img: logo },
+        { img: logo },
+    ]
+
     return (
         <div className="home">
             <div className="main-screen">
@@ -84,9 +100,9 @@ function Home() {
                 </div>
             </div>
             <Slider
-                name="Новости" cards={cardDataNews}/>
+                name="Новости" cards={cardDataNews} />
             <ServicesTab />
-            <PartnersTab />
+            <PartnersTab partners={partners} />
             <BigBlock
                 img1={event1}
                 img2={event2}
@@ -130,7 +146,7 @@ function Home() {
                 btn="true"
                 URL="/participation"
             />
-            <BigBlock
+            <BigBlockAlt
                 head="УСТОЙЧИВОЕ РАЗВИТИЕ"
                 img1={mission1}
                 img2={mission2}
@@ -152,7 +168,7 @@ function Home() {
         `}
                 btn="false"
             />
-            <BigBlockReverse
+            <BigBlockAltReverse
                 img1={direction1}
                 img2={direction2}
                 img3={direction3}
@@ -171,7 +187,7 @@ function Home() {
         `}
                 btn="false"
             />
-            <Slider name="НАША КОМАНДА" cards={cardDataTeam} />/>
+            <Slider name="НАША КОМАНДА" cards={cardDataTeam} />
             <InfoBlock
                 head="АМБАССАДОРСТВО"
                 p="Наша компания тщательно выбирает партнеров, чтобы обеспечить вас лучшими товарами и услугами. Мы работаем только с проверенными поставщиками, которые разделяют наши ценности в отношении качества, надежности и оперативности."

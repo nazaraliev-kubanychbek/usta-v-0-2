@@ -5,6 +5,7 @@ import linkedin from '../../Shared/Images/social/linkedin.png'
 import telegram from '../../Shared/Images/social/telegram.png'
 import youtube from '../../Shared/Images/social/YouTube.png'
 import phone from '../../Shared/Images/social/phone-call.png'
+import home from '../../Shared/Images/social/home.png'
 
 
 function ContactPage() {
@@ -18,12 +19,12 @@ function ContactPage() {
                             <h1 className="ContactsPage-elements-upperBlock-head">МЫ В СОЦИАЛЬНЫХ СЕТЯХ:</h1>
                             <div className="ContactsPage-elements-upperBlock-content">
                                 <div className="ContactsPage-elements-upperBlock-content-block">
-                                    <div className="ContactsPage-elements-upperBlock-content-block-socmed"><img src={instagram} /><p>Instagram</p></div>
-                                    <div className="ContactsPage-elements-upperBlock-content-block-socmed"><img src={youtube} /><p>YouTube</p></div>
+                                    <div className="ContactsPage-elements-upperBlock-content-block-socmed"><img src={instagram} /><a href="https://www.instagram.com/usta_international">Instagram</a></div>
+                                    <div className="ContactsPage-elements-upperBlock-content-block-socmed"><img src={youtube} /><a href="https://www.youtube.com/watch?v=_LTyF2adV_8&list=PLr-7qpmyaPYyWxZRjb9NcXDh64hLS_6wA">YouTube</a></div>
                                 </div>
                                 <div className="ContactsPage-elements-upperBlock-content-block">
-                                    <div className="ContactsPage-elements-upperBlock-content-block-socmed"><img src={telegram} /><p>Telegram</p></div>
-                                    <div className="ContactsPage-elements-upperBlock-content-block-socmed"><img src={linkedin} /><p>LinkedIn</p></div>
+                                    <div className="ContactsPage-elements-upperBlock-content-block-socmed"><img src={telegram} /><a href="https://t.me/usta_media">Telegram</a></div>
+                                    <div className="ContactsPage-elements-upperBlock-content-block-socmed"><img src={linkedin} /><a href="">LinkedIn</a></div>
                                 </div>
                             </div>
                         </div>
@@ -31,8 +32,8 @@ function ContactPage() {
                             <h1 className="ContactsPage-elements-upperBlock-head">НАШИ КОНТАКТЫ:</h1>
                             <div className="ContactsPage-elements-upperBlock-content">
                                 <div className="ContactsPage-elements-upperBlock-content-block">
-                                    <div className="ContactsPage-elements-upperBlock-content-block-socmed"><img src={phone} /><p>+996 755 405 666</p></div>
-                                    <div className="ContactsPage-elements-upperBlock-content-block-socmed"><img src={youtube} /><p>Instagram</p></div>
+                                    <div className="ContactsPage-elements-upperBlock-content-block-socmed"><img src={phone} /><a href="tel:+996755405666">+996 755 405 666</a></div>
+                                    <div className="ContactsPage-elements-upperBlock-content-block-socmed"><img src={home} /><a href="mailto:usta.community@gmail.com">usta.community@gmail.com</a></div>
                                 </div>
                             </div>
                         </div>

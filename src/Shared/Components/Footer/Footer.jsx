@@ -1,10 +1,11 @@
 import logo from "../../Images/logo.svg";
 import "./footer.scss";
 
-import youtube from "../../Images/youtube.jpg";
-import insta from "../../Images/insta.jpg";
-import telegram from "../../Images/telegram.png";
-import linkedIn from "../../Images/linkedin.png";
+
+import insta from '../../Images/social/instagram.png'
+import linkedIn from '../../Images/social/linkedin.png'
+import telegram from '../../Images/social/telegram.png'
+import youtube from '../../Images/social/YouTube.png'
 
 import { NavLink } from "react-router-dom";
 import BYGEEKSPRO from '../../Images/BY GEEKS PRO.png';
@@ -118,11 +119,17 @@ const Footer = () => {
                         <div id="contacts" className="footer-elements-column-contacts">
                             <h1>Контакты</h1>
                             <a href="tel:+996755405666">+996 755 405 666</a>
-                            <a href="mailto:erkin@bim.standard.xyz">erkin@bim.standard.xyz</a>
+                            <a href="mailto:usta.community@gmail.com">usta.community@gmail.com</a>
                             <div className="footer-elements-contacts">
-                                <img className="footer-elements-contacts-web" src={insta} alt="Instagram" />
-                                <img className="footer-elements-contacts-web" src={youtube} alt="YouTube" />
-                                <img className="footer-elements-contacts-web" src={telegram} alt="Telegram" />
+                                <a href="https://www.instagram.com/usta_international/">
+                                    <img className="footer-elements-contacts-web" src={insta} alt="Instagram" />
+                                </a>
+                                <a href="https://www.youtube.com/watch?v=_LTyF2adV_8&list=PLr-7qpmyaPYyWxZRjb9NcXDh64hLS_6wA">
+                                    <img className="footer-elements-contacts-web" src={youtube} alt="YouTube" />
+                                </a>
+                                <a href="https://t.me/usta_media">
+                                    <img className="footer-elements-contacts-web" src={telegram} alt="Telegram" />
+                                </a>
                                 <img className="footer-elements-contacts-web" src={linkedIn} alt="LinkedIn" />
                             </div>
                         </div>
@@ -134,7 +141,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
