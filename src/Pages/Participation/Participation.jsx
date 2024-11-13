@@ -8,7 +8,7 @@ import img11 from "./imgs/Rectangle 59 (2).png";  import left from "./imgs/slide
 
 function Participation() {
   return (
-  <div className='Participation-container'>  
+  <div className='Participation-container'>
     <div className='Participation'>
       <div className="container">
       <div className='Participation-texts'>
@@ -17,6 +17,10 @@ function Participation() {
            <p className='Participation-title'>“USTA International” вдохновляет и направляет людей в сфере инженерии. Мы делаем инженерный подход понятным и привлекательным, чтобы каждый мог найти себя в этой профессии и реализоваться</p>
           </div>
        </div>
+
+       </div>
+     </div>
+    <div className="container">
     <div className='Participation-row-box'>
       <div className='row'>
         <div className='col-6'>
@@ -54,7 +58,7 @@ function Participation() {
             <div className="Participation-btn">
             <img src={left} class="slider-btn-icon"></img>
             <img src={right} class="slider-btn-icon"></img>
-        </div>  
+        </div>
           <div className="Participation-img-text">
             <div className="Participation-item">
                <img src={img5} alt="" />
@@ -108,9 +112,8 @@ function Participation() {
       </div>
       </div>
     </div>
+    </div>  
     </div>
-       </div>
-     </div>
    </div>
   )
 }

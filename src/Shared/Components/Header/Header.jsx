@@ -2,10 +2,14 @@ import { useState, useEffect } from "react";
 import "./Header.scss";
 import { NavLink, useLocation } from "react-router-dom";
 import Logo from "../../Images/logo.svg";
+import burgerOpenIcon from './img/burger-icon-open.svg';
+import burgerCloseIcon from './img/burger-icon-close.svg';
+import HeaderMobile from "./HeaderMobile/HeaderMobile";
 //import PopUp from './Float/PopUp'
 function Header() {
     const [scrolled, setScrolled] = useState(false);
     const location = useLocation();
+    const [showBurger, setShowBurger] = useState(false);
 
     const handleScroll = () => {
         if (window.scrollY > 50) {
@@ -50,8 +54,9 @@ function Header() {
 
     return (
         <div className="container">
+            <HeaderMobile showBurger={showBurger} setShowBurger={setShowBurger} />
             <div className={`Header ${scrolled ? "Header-scrolled" : ""}`}>
-                <div className="row">
+                <div className="row header-row">
                     {!scrolled ? (
                         <>
                             <div className="Header-topline">
@@ -95,6 +100,21 @@ function Header() {
                                     </li>
                                 </ul>
                             </nav>
+                            <div className="header-mobile">
+                            <div className="header-mobile-logo">
+                                    <img src={Logo} alt="Logo" />
+                                </div>
+                            <button className="header-burger-btn" onClick={()=>{
+                                setShowBurger(!showBurger)
+                            }}>
+                                <img src={
+                                    showBurger
+                                    ? burgerCloseIcon
+                                    : burgerOpenIcon
+                                } alt="" />
+                            </button>
+                            </div>
+
                         </>
                     ) : (
                         <>
@@ -140,6 +160,20 @@ function Header() {
                                         </li>
                                     </ul>
                                 </nav>
+                            </div>
+                            <div className="header-mobile">
+                            <div className="header-mobile-logo">
+                                    <img src={Logo} alt="Logo" />
+                                </div>
+                            <button className="header-burger-btn" onClick={()=>{
+                                setShowBurger(!showBurger)
+                            }}>
+                                <img src={
+                                    showBurger
+                                    ? burgerCloseIcon
+                                    : burgerOpenIcon
+                                } alt="" />
+                            </button>
                             </div>
                         </>
                     )}
