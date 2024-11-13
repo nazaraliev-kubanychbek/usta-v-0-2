@@ -1,13 +1,9 @@
 .Services {
     .mainscreen {
-        display: flex;
-        flex-direction: column;
-        align-content: end;
-        justify-content: end;
         width: 100%;
         height: 100vh;
         background-image: url("./imgs/Rectangle\ 288\ \(1\).png");
-        padding: 70px 75px 150px;
+       padding-top: 470px;
         gap: 40px;
         background-repeat: round;
 
@@ -54,7 +50,8 @@
             }
         }
     }
-    &-Services-h1{
+
+    &-Services-h1 {
         font-family: Helvetica;
         font-size: 30px;
         font-weight: 400px;
@@ -62,21 +59,29 @@
         letter-spacing: -0.04em;
         text-align: left;
     }
-    &-h1-imgs{
+
+    &-h1-imgs {
         display: flex;
         justify-content: space-around;
         padding-top: 50px;
         margin-left: -10px;
     }
-    &-h1-imgs-img{
+
+    &-img-card {
         width: 310px;
-        margin: 5px;
-        height: 240px;  
-        border-radius: 20px 0px 0px 0px;
-        opacity: 0px;
-        
+        height: 240px;
+        padding: 5px;
     }
-    &-h1-imgs-img-title{
+
+    &-h1-imgs-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        object-fit: cover;
+
+    }
+
+    &-h1-imgs-img-title {
         font-family: Helvetica;
         font-size: 20px;
         font-weight: 400;
@@ -84,12 +89,78 @@
         letter-spacing: -0.04em;
         margin: 5px;
     }
- 
 
-  
+
+
 }
-.padding-box{
+
+.padding-box {
     padding-top: 100px;
 }
 
+@media screen and (max-width: 1400px){
+    .Services .mainscreen {
+        padding-top: 400px;
+    }
+}
 
+@media screen and (max-width: 1200px){
+    .Services .mainscreen {
+        padding-top: 350px;
+    }
+
+.Services .mainscreen-text__p{
+font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .services-card-scroll {
+        overflow: visible;
+        overflow-x: auto;
+        white-space: nowrap;
+        height: 40vh;
+    }
+
+    .Services-img-card {
+        height: 150px;
+    }
+    .Services .mainscreen-text__h1{
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Services {
+        .padding-100px {
+            padding: 15px 0;
+        }
+    }
+
+    .Services {
+        .InfoBlock-text h1 {
+            font-size: 22px;
+            line-height: 36px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 576px){
+    .Services{
+        .InfoBlock {
+            flex-wrap: wrap;
+            &-img,
+            &-text{
+                width: 100%;
+            }
+        }
+
+    }
+    .Services .mainscreen-text__h1{
+        font-size: 34px;
+    }
+    .Services .mainscreen-text__p{
+        font-size: 14px;
+            }
+}

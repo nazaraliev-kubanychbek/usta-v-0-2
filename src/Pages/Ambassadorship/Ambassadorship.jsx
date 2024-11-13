@@ -21,6 +21,7 @@ function Ambassadorship() {
       </div>
     </div>
   </div>
+  <div className="container">
   <div className="Ambassadorship-container">
     <div className="Ambassadorship-container-links">
       <a className='Ambassadorship-container-links-link' href="#">Реквизиты</a>
@@ -32,40 +33,43 @@ function Ambassadorship() {
       <a className='Ambassadorship-container-links-link' href="#">Услуги </a>
     </div>
   </div>
+  </div>
+<div className="container">
 <div className='Ambassadorship-imgs'>
-<div>
-<img className='Ambassadorship-imgs-alt-img' src={img1} alt="Описание изображения" /> 
+<div className='col-3'>
+<img className='Ambassadorship-imgs-alt-img' src={img1} alt="Описание изображения" />
 <p className='Ambassadorship-imgs-text'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim.</p>
 </div>
-<div>
+<div  className='col-3'>
 <img className='Ambassadorship-imgs-alt-img' src={img2} alt="Описание изображения" />
 <p className='Ambassadorship-imgs-text'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim.</p>
 </div>
-<div>
+<div  className='col-3'>
 <img className='Ambassadorship-imgs-alt-img' src={img3} alt="Описание изображения" />
 <p className='Ambassadorship-imgs-text'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim.</p>
 </div>
-<div>
-<img className='Ambassadorship-imgs-alt-img' src={img4} alt="Описание изображения" /> 
+<div  className='col-3'>
+<img className='Ambassadorship-imgs-alt-img' src={img4} alt="Описание изображения" />
 <p className='Ambassadorship-imgs-text'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim.</p>
 </div>
 </div>
 <div className='Ambassadorship-imgs-alt'>
-<div>
-<img className='Ambassadorship-imgs-alt-img' src={img5} alt="Описание изображения" /> 
+<div className='col-3'>
+<img className='Ambassadorship-imgs-alt-img' src={img5} alt="Описание изображения" />
 <p className='Ambassadorship-imgs-text'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim.</p>
 </div>
-<div>
+<div  className='col-3'>
 <img className='Ambassadorship-imgs-alt-img' src={img6} alt="Описание изображения" />
 <p className='Ambassadorship-imgs-text'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim.</p>
 </div>
-<div>
+<div  className='col-3'>
 <img className='Ambassadorship-imgs-alt-img' src={img7} alt="Описание изображения" />
 <p className='Ambassadorship-imgs-text'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim.</p>
 </div>
-<div>
-<img className='Ambassadorship-imgs-alt-img' src={img8} alt="Описание изображения" /> 
+<div className='col-3'>
+<img className='Ambassadorship-imgs-alt-img' src={img8} alt="Описание изображения" />
 <p className='Ambassadorship-imgs-text'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim.</p>
+</div>
 </div>
 </div>
 <div className='Ambassadorship-padding'></div>

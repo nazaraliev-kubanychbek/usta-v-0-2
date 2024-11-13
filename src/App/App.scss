@@ -21,6 +21,10 @@ h1 {
     float: left;
     padding: 0 15px;
 }
+.col-3{
+    width: 25%;
+    padding: 0 15px;
+}
 
 .col-4 {
     width: 33.33%; /* 4/12 * 100 */
@@ -112,7 +116,7 @@ h1 {
 
 @media screen and (max-width: 768px) {
     .container {
-        max-width: 720px
+        max-width: 540px
     }
 }
 

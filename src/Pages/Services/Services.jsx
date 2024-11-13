@@ -32,42 +32,42 @@ function Services() {
         </div>
       </div>
       <div className="padding-box"></div>
-    <InfoBlock 
+    <InfoBlock
         head="Организация сетевого взаимодействия"
         p="Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim. Praesent turpis odio rutrum platea egestas duis turpis nunc. Non vitae ac risus molestie tristique molestie enim volutpat. Vehicula iaculis sem velit accumsan velit."
         InfoImg={img}
         URL="/url"
     />
     <div className="padding-box"></div>
-        <InfoBlockReverse 
+        <InfoBlockReverse
         head="Помощь в государственно-частном партнерстве"
         p="Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim. Praesent turpis odio rutrum platea egestas duis turpis nunc. Non vitae ac risus molestie tristique molestie enim volutpat. Vehicula iaculis sem velit accumsan velit."
         InfoImg={img2}
         URL="/url"
     />
     <div className="padding-box"></div>
-        <InfoBlock 
+        <InfoBlock
         head="Проектирование экологических и природоохранных решений"
         p="Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim. Praesent turpis odio rutrum platea egestas duis turpis nunc. Non vitae ac risus molestie tristique molestie enim volutpat. Vehicula iaculis sem velit accumsan velit."
         InfoImg={img3}
         URL="/url"
     />
     <div className="padding-box"></div>
-        <InfoBlockReverse 
+        <InfoBlockReverse
         head="Генпроектирование инновационных инфраструктурных решений"
         p="Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim. Praesent turpis odio rutrum platea egestas duis turpis nunc. Non vitae ac risus molestie tristique molestie enim volutpat. Vehicula iaculis sem velit accumsan velit."
         InfoImg={img4}
         URL="/url"
     />
     <div className="padding-box"></div>
-        <InfoBlock 
+        <InfoBlock
         head="Организация семинаров и конференций"
         p="Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim. Praesent turpis odio rutrum platea egestas duis turpis nunc. Non vitae ac risus molestie tristique molestie enim volutpat. Vehicula iaculis sem velit accumsan velit."
         InfoImg={img5}
         URL="/url"
     />
     <div className="padding-box"></div>
-        <InfoBlockReverse 
+        <InfoBlockReverse
         head="Интеграция"
         p="Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim. Praesent turpis odio rutrum platea egestas duis turpis nunc. Non vitae ac risus molestie tristique molestie enim volutpat. Vehicula iaculis sem velit accumsan velit."
         InfoImg={img6}
@@ -76,27 +76,29 @@ function Services() {
 <div className="padding-box"></div>
 <div className="container">
   <h1 className="Services-h1">Статьи и рекомендации</h1>
+    <div className="services-card-scroll">
     <div className="Services-h1-imgs">
-      <div>
+      <div className="Services-img-card">
           <img className="Services-h1-imgs-img" src={img7} alt="" />
           <p className="Services-h1-imgs-img-title">Развитие карьеры</p>
       </div>
-      <div>
+      <div className="Services-img-card">
           <img className="Services-h1-imgs-img" src={img8} alt="" />
           <p className="Services-h1-imgs-img-title">Собеседование</p>
       </div>
-      <div>
+      <div className="Services-img-card">
           <img className="Services-h1-imgs-img" src={img9} alt="" />
           <p className="Services-h1-imgs-img-title">Как добиваться успеха</p>
       </div>
-      <div>
+      <div className="Services-img-card">
           <img className="Services-h1-imgs-img" src={img0} alt="" />
           <p className="Services-h1-imgs-img-title">О инженерной сфере</p>
       </div>
     </div>
+    </div>
   </div>
 <div className="padding-box"></div>
-  <InfoBlock 
+  <InfoBlock
         head="Организация семинаров и конференций" className="Services-text-head"
         p="Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim. Praesent turpis odio rutrum platea egestas duis turpis nunc. Non vitae ac risus molestie tristique molestie enim volutpat. Vehicula iaculis sem velit accumsan velit."
         btn="troo"

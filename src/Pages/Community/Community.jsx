@@ -11,6 +11,9 @@ function Community() {
       <div className='banner'>
           <div className="container">
             <div className="content-head">
+            <h1 className="content-head-h1">
+              О СООБЩЕСТВЕ
+            </h1>
             <p className="content-head-p">
               “USTA International” 
               вдохновляет и направляет 
@@ -20,11 +23,12 @@ function Community() {
               чтобы каждый мог найти себя в этой 
               профессии и реализоваться
             </p>
-            </div>
+          </div>
           </div>
       </div>
       <div className="container">
         
+        <Slider />
         <Slider />
         <Partners />
         <Index />
