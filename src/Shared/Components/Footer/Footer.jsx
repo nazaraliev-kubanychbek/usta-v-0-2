@@ -133,6 +133,108 @@ const Footer = () => {
                                 <img className="footer-elements-contacts-web" src={linkedIn} alt="LinkedIn" />
                             </div>
                         </div>
+                        <div className="footer-element-column-mobile">
+                        <img className="footer-elements-logo" src={logo} alt="Logo" />
+                        <ul>
+                                <li>
+                                    <NavLink
+                                        to="/"
+                                        className={({ isActive }) => (isActive ? "isActive" : "")}
+                                        onClick={scrollToTop}
+                                    >
+                                        Главное
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="/community"
+                                        className={({ isActive }) => (isActive ? "isActive" : "")}
+                                        onClick={scrollToTop}
+                                    >
+                                        О сообществе
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="/events"
+                                        className={({ isActive }) => (isActive ? "isActive" : "")}
+                                        onClick={scrollToTop}
+                                    >
+                                        Мероприятие
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="/membership"
+                                        className={({ isActive }) => (isActive ? "isActive" : "")}
+                                        onClick={scrollToTop}
+                                    >
+                                        Членство
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="/education"
+                                        className={({ isActive }) => (isActive ? "isActive" : "")}
+                                        onClick={scrollToTop}
+                                    >
+                                        Образование и сертификаты
+                                    </NavLink>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="footer-element-column-mobile">
+                        <h1>Навигация</h1>
+                        <ul style={{ paddingTop: "43px" }}>
+                                <li>
+                                    <NavLink
+                                        to="/services"
+                                        className={({ isActive }) => (isActive ? "isActive" : "")}
+                                        onClick={scrollToTop}
+                                    >
+                                        Услуги
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="/ambassadorship"
+                                        className={({ isActive }) => (isActive ? "isActive" : "")}
+                                        onClick={scrollToTop}
+                                    >
+                                        Амбассадорство
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="/participation"
+                                        className={({ isActive }) => (isActive ? "isActive" : "")}
+                                        onClick={scrollToTop}
+                                    >
+                                        Участие в проектах
+                                    </NavLink>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div className="footer-element-column-mobile">
+                        <h1>Контакты</h1>
+                            <a href="tel:+996755405666">+996 755 405 666</a>
+                            <a href="mailto:usta.community@gmail.com">usta.community@gmail.com</a>
+                        </div>
+                        <div className="footer-element-column-mobile">
+                        <div className="footer-elements-contacts">
+                                <a href="https://www.instagram.com/usta_international/">
+                                    <img className="footer-elements-contacts-web" src={insta} alt="Instagram" />
+                                </a>
+                                <a href="https://www.youtube.com/watch?v=_LTyF2adV_8&list=PLr-7qpmyaPYyWxZRjb9NcXDh64hLS_6wA">
+                                    <img className="footer-elements-contacts-web" src={youtube} alt="YouTube" />
+                                </a>
+                                <a href="https://t.me/usta_media">
+                                    <img className="footer-elements-contacts-web" src={telegram} alt="Telegram" />
+                                </a>
+                                <img className="footer-elements-contacts-web" src={linkedIn} alt="LinkedIn" />
+                            </div>
+                        </div>
                     </div>
                     <div style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "center", marginTop: "16px", height: "auto" }}>
                         <a href="https://geeks.kg/geeks-pro">

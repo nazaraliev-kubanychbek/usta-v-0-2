@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import img5 from '../assets/55.png';
 import img6 from '../assets/66.png';
 import './styles/slider.scss';
@@ -19,27 +20,23 @@ const slides = [
 ];
 
 const Slider = () => {
-  const [startIndex, setStartIndex] = useState(0);
-  const itemsPerRow = 4; 
-  const totalRows = 1;   // Общее количество строк
-  const itemsPerPage = itemsPerRow * totalRows; // Элементы на странице
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const swiperRef = useRef(null);
 
   const slideLeft = () => {
-    setStartIndex((prevIndex) => {
-      const newIndex = prevIndex - 1;
-      return newIndex >= 0 ? newIndex : Math.max(slides.length - itemsPerPage, 0); // Убедитесь, что не выходим за пределы
-    });
+    if (swiperRef.current) {
+      swiperRef.current.slidePrev();
+    }
   };
 
   const slideRight = () => {
-    setStartIndex((prevIndex) => {
-      const newIndex = prevIndex + 1;
-      return newIndex < slides.length ? newIndex : 0; // Вернуться к началу, если вышли за пределы
-    });
+    if (swiperRef.current) {
+      swiperRef.current.slideNext();
+    }
   };
 
-  const handleDotClick = (dotIndex) => {
-    setStartIndex(dotIndex * itemsPerPage);
+  const handleSlideChange = (swiper) => {
+    setCurrentIndex(swiper.realIndex);
   };
 
   return (
@@ -54,52 +51,50 @@ const Slider = () => {
       </div>
 
       <div className="slider-container">
-        <div className="slider">
-          {[...Array(totalRows)].map((_, rowIndex) => (
-            <div className="slide-row" key={rowIndex}>
-              {slides
-                .slice(startIndex + rowIndex * itemsPerRow, startIndex + rowIndex * itemsPerRow + itemsPerRow)
-                .map((slide) => (
-                  <div className="slide-item" key={slide.id}>
-                    <img src={slide.img} alt={slide.title} />
-                    <p className="slide-item-p">{slide.title}</p>
-                  </div>
-                ))}
-            </div>
+        <Swiper
+          spaceBetween={20}
+          loop={true}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
+          onSlideChange={handleSlideChange}
+          breakpoints={{
+            260: { slidesPerView: 1, spaceBetween: 40 },
+
+            360: { slidesPerView: 1, spaceBetween: 20 },
+
+            480: { slidesPerView: 1.4, spaceBetween: 20 },
+            570: { slidesPerView: 1.6, spaceBetween: 20 },
+            770: { slidesPerView: 2.3, spaceBetween: 40 },
+            1024: { slidesPerView: 3, spaceBetween: 20 },
+            1220: {slidesPerView: 3.5, spaceBetween: 20},
+            1420: { slidesPerView: 4, spaceBetween: 20 },
+          }}
+        >
+          {slides.map((slide) => (
+            <SwiperSlide key={slide.id}>
+              <div className="slide-item">
+                <img src={slide.img} alt={slide.title} />
+                <p className="slide-item-p">{slide.title}</p>
+              </div>
+            </SwiperSlide>
           ))}
-        </div>
-      </div>
-      <div className="slider-container">
-        <div className="slider">
-          {[...Array(totalRows)].map((_, rowIndex) => (
-            <div className="slide-row" key={rowIndex}>
-              {slides
-                .slice(startIndex + rowIndex * itemsPerRow, startIndex + rowIndex * itemsPerRow + itemsPerRow)
-                .map((slide) => (
-                  <div className="slide-item" key={slide.id}>
-                    <img src={slide.img} alt={slide.title} />
-                    <p className="slide-item-p">{slide.title}</p>
-                  </div>
-                ))}
-            </div>
-          ))}
-        </div>
+        </Swiper>
       </div>
 
       <div className="dots-container">
-        {Array(Math.ceil(slides.length / itemsPerPage)).fill(0).map((_, dotIndex) => (
-          <div 
-            key={dotIndex}
-            className={`dot ${Math.floor(startIndex / itemsPerPage) === dotIndex ? 'active' : ''}`}
-            onClick={() => handleDotClick(dotIndex)}
-          />
-        ))}
+        {Array(Math.ceil(slides.length / 4))
+          .fill(0)
+          .map((_, dotIndex) => (
+            <div
+              key={dotIndex}
+              className={`dot ${
+                currentIndex >= dotIndex * 4 && currentIndex < (dotIndex + 1) * 4 ? 'active' : ''
+              }`}
+              onClick={() => swiperRef.current && swiperRef.current.slideToLoop(dotIndex * 4)}
+            />
+          ))}
       </div>
     </div>
   );
 };
-
-
-
 
 export default Slider;

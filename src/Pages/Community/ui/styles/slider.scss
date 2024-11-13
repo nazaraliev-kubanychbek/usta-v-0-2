@@ -1,9 +1,11 @@
 .slider-container {
     display: flex;
     align-items: center;
+    gap: 50px;
     justify-content: center;
-    max-width: 100%;
+    width: 100%;
   }
+  
   
   .slide-row {
     display: flex;
@@ -14,7 +16,7 @@
   .slide-item {
     text-align: left;
     margin-bottom: 50px;
-  
+    
     &-p {
       font-family: Helvetica;
       font-size: 20px;
@@ -78,7 +80,7 @@
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     // Отступ сверху для визуального разделения
   }
   
@@ -92,7 +94,7 @@
     cursor: pointer; // Указывает, что элемент кликабельный
     transition: background-color 0.3s ease; // Плавный переход цвета при наведении
   
-    &.active {
+    &:active {
         background: #242424;
     }
   
