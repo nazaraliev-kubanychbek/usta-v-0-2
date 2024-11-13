@@ -1,4 +1,3 @@
-
 .Participation {
     width: 100%;
     height: 100vh;
@@ -12,9 +11,9 @@
         font-family: 'Helvetica';
         font-size: 50px;
         letter-spacing: -0.04em;
+        margin-top: 200PX;
         text-transform: uppercase;
         color: #FFFFFF;
-        // margin-left: 200px;
     }
     &-title {
         width: 733px;
@@ -24,11 +23,9 @@
         letter-spacing: -0.04em;
         color: #FFFFFF;
         margin-top: 20px;
-        // margin-left: 200px;
     }
     &-imgs {
         width: 100%;
-        // height: auto;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -61,6 +58,7 @@
         width: 100%;
         border-radius: 20px;
         position: absolute;
+        object-fit: cover;
     }
     &-row-box{
         margin-top: 50px;
@@ -74,14 +72,15 @@
         flex-direction: column;
         align-items: center;
         &-text {
-            width: 1017px;
+            // width: 1017px;
             font-family: 'Helvetica';
             font-size: 40px;
             letter-spacing: -0.04em;
             text-transform: uppercase;
             color: #000000;
             margin-top: 20px;
-            margin-left: -270px;
+            // margin-left: -270px;
+            margin-bottom: 50px;
         }
     }
     &-btn {
@@ -92,7 +91,6 @@
         display: flex;
         justify-content: center;
         margin-top: 50px;
-        // margin-left: 270px;
     }
     &-program-con{
         margin-top: 40px;
@@ -121,7 +119,7 @@
         margin-top: 50px;
     }
     &-program-title{
-        width: 640px;
+        // width: 640px;
         height: 120px;
         font-family: Helvetica;
         gap: 0px;
@@ -139,5 +137,129 @@
             text-align: left;
             color: #000000;
             text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 1400px){
+    .Participation .container {
+        padding-top: 400px;
+        // padding: 100px;
+    }
+    .Participation-text{
+        margin-top: 0;
+        height: auto;
+    }
+    .Participation{
+        padding-top: 50px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .Participation .container {
+        padding-top: 350px;
+        // padding: 300px;
+    }
+        .Participation .Participation-title{
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+    .Participation .container {
+        padding-top: 350px;
+        // padding: 300px;
+    }
+    .Participation-card-scroll {
+        overflow: visible;
+        overflow-x: auto;
+        white-space: nowrap;
+        height: 40vh;
+    }
+
+    .Participation-img-card {
+        height: 150px;
+    }
+    .Participation .Participation-text{
+        font-size: 40px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .Participation {
+        // padding: 300px;
+        .padding-100px {
+            padding: 15px 0;
+        }
+
+    }
+    .Participation-program-con .col-6 {
+
+            width: 100%;
+
+    }
+    .Participation-title{
+        width: 100%;
+    }
+    .Participation-program-img{
+        width: 100%;
+    }
+
+    .Participation {
+        // padding: 300px;
+
+        .InfoBlock-text h1 {
+            font-size: 22px;
+            line-height: 36px;
+        }
+    }
+    .Participation-program-text-h3{
+        width: 100%;
+    }
+
+
+}
+
+@media screen and (max-width: 576px){
+    .Participation-text{
+        margin-top: 0;
+        height: auto;
+    }
+    .Participation{
+        padding-top: 50px;
+    }
+    .Participation-program-text-h3,
+    .Participation-gap-text{
+        font-size: 30px;
+        line-height: 100%;
+        height: auto;
+    }
+    .Participation-program-title,
+    .Participation-program-text{
+        height: auto;
+    }
+    .Participation-text{
+        width: 100%;
+    }
+    .Participation-program-text{
+        width: 100%;
+    }
+    .Participation{
+        // padding: 300px;
+        .InfoBlock {
+            flex-wrap: wrap;
+            &-img,
+            &-text{
+                width: 100%;
+            }
+        }
+
+    }
+    .Participation .Participation-text{
+        font-size: 34px;
+    }
+    .Participation .Participation-title{
+        font-size: 14px;
     }
 }

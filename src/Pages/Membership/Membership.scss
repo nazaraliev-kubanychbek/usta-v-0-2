@@ -112,7 +112,7 @@ width: 100%;
 
 .member-body-text1{
   color: #00000080;
-  
+
 }
 
 
@@ -163,8 +163,8 @@ width: 100%;
 
 .member-category {
   display: flex;
-  gap: 20px;  
-  
+  gap: 20px;
+
 
   .category-img {
     width: 100%;
@@ -193,7 +193,7 @@ width: 100%;
 .ctegory-text {
   margin-top: 150px;
   font-size: 40px;
-  font-family: Helvetica; 
+  font-family: Helvetica;
 
 }
 
@@ -251,7 +251,7 @@ width: 100%;
 .block:hover {
   background-color: transparent;
   border: 2px solid #08258B;
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
 
 .block:hover .member-block-category-title {
@@ -309,6 +309,10 @@ width: 100%;
 
 
 @media screen and (max-width: 1400px) {
+  .member-title{
+    padding-bottom: 0;
+    padding-top: 350px;
+  }
     .container {
         max-width: 1140px;
     }
@@ -316,6 +320,7 @@ width: 100%;
 width: 100%;
     }
     .member-body-title{
+      
       width: 100%;
           }
 
@@ -342,7 +347,7 @@ width: 100%;
                             .member-title{
 
                             }
-      
+
 
   .member-main-title{
     width: 386px;
@@ -400,7 +405,7 @@ margin-top: 20px;
   }
 
 
-    
+
 }
 
 @media screen and (max-width: 1200px) {
@@ -418,7 +423,7 @@ margin-top: 20px;
       line-height: 25px;
       letter-spacing: -0.04em;
     }
-    
+
     .member-main-title span{
       display: block;
     }
@@ -446,7 +451,7 @@ text-underline-position: from-font;
 text-decoration-skip-ink: none;
 
     }
-.member-body-text1{
+.member-body-text{
   width: 100%;
 height: 98px;
 margin-top: 15px;
@@ -467,14 +472,13 @@ color: #00000080;
 
 
 }
-    .member-body-text11{
+    .member-body-text1{
       width: 100%;
       height: 98px;
       margin-top: 15px;
       top: 1206px;
       left: 389px;
       gap: 0px;
-      color: #08258B;
       opacity: 0px;
       //styleName: Tablet Типографика/описание 4;
       font-family: Helvetica;
@@ -505,10 +509,10 @@ opacity: 0px;
 
     .member-main-text{
 width: 100%;
-      height: 154px;
+      // height: 154px;
       top: 1542px;
       left: 20px;
-   
+
     //styleName: Tablet Типографика/описание 4;
 font-family: Helvetica;
 font-size: 14px;
@@ -520,11 +524,11 @@ text-underline-position: from-font;
 text-decoration-skip-ink: none;
   gap: 10px;
       opacity: 10px;
-      
+
     }
 
     .member-main-text1{
-      width: 350px;
+      width: 100%;
       height: 140px;
       top: 2214px;
       left: 20px;
@@ -539,7 +543,7 @@ letter-spacing: -0.04em;
 text-align: left;
 text-underline-position: from-font;
 text-decoration-skip-ink: none;
-      
+
     }
 
     .member-main-title1{
@@ -560,7 +564,7 @@ text-underline-position: from-font;
 text-decoration-skip-ink: none;
 
     }
-    
+
 
     .img1{
       // width: 359px;
@@ -576,38 +580,38 @@ opacity: 0px;
 
     .img2{
       width: 100%;
-      
+
       height: 286px;
       // margin-top: 19px;
       // margin-left: -90px;
       gap: 0px;
       border-radius: 20px 0px 0px 0px;
       opacity: 0px;
-      
+
     }
 
     .img3{
       width: 100%;
-      
+
       height: 286px;
       top: 1795px;
       left: 20px;
       gap: 0px;
       border-radius: 20px 0px 0px 0px;
       opacity: 0px;
-      
+
     }
 
     .img4{
       width: 100%;
-     
+
       height: 286px;
       top: 2131px;
       // margin-left: -90px;
       gap: 0px;
       border-radius: 20px 0px 0px 0px;
       opacity: 0px;
-      
+
 
     }
 
@@ -623,18 +627,18 @@ opacity: 0px;
       line-height: 41.4px;
       letter-spacing: -0.04em;
       text-align: center;
-                  
+
     }
 
     .block{
       width: 165px;
       height: 165px;
-  // margin: 6px; 
+  // margin: 6px;
   margin-top: 40px;
     }
 
 
-    
+
   .member-block-category-title{
     width: 78.33px;
     height: 27.5px;
@@ -647,8 +651,8 @@ opacity: 0px;
     font-weight: 400;
     line-height: 27.6px;
     letter-spacing: -0.04em;
-        
-        
+
+
 
   }
 
@@ -666,10 +670,10 @@ opacity: 0px;
     font-weight: 400;
     line-height: 15.4px;
     letter-spacing: -0.04em;
-        
+
 
   }
-  
+
 .scroll{
   overflow-x: auto;
   white-space: nowrap;
@@ -685,9 +689,7 @@ opacity: 0px;
     }
 
 
-    .member-steps{
 
-    }
 
 
    .img2{
@@ -721,6 +723,7 @@ opacity: 0px;
    }
    .member-main-title1{
     width: 100%;
+    margin-top: 5px;
 height: 50px;
 top: 2149px;
 left: 20px;
@@ -746,7 +749,9 @@ text-decoration-skip-ink: none;
     .container {
         max-width: 540px;
     }
-    
+
+
+
      .img1{
       // width: 359px;
       width: 100%;
@@ -754,12 +759,11 @@ height: 286px;
 top: 1123px;
 left: 20px;
 gap: 0px;
-border-radius: 20px 0px 0px 0px;
 opacity: 0px;
 
      }
-    
-  
+
+
      .img2{
       // margin-left: 100px;
       // width: 359px;
@@ -768,9 +772,8 @@ opacity: 0px;
       top: 1459px;
       left: 389px;
       gap: 0px;
-      border-radius: 20px 0px 0px 0px;
       opacity: 0px;
-      
+
      }
      .img3{
       // width: 359px;
@@ -779,7 +782,6 @@ height: 286px;
 top: 1459px;
 left: 389px;
 gap: 0px;
-border-radius: 20px 0px 0px 0px;
 opacity: 0px;
 
      }
@@ -788,7 +790,7 @@ opacity: 0px;
   // margin-left: 100px;
   width: 350px;
   height: 86px;
-  
+
      }
   .member-text{
     width: 100%;
@@ -800,22 +802,22 @@ opacity: 0px;
 height: 286px;
 top: 1459px;
 gap: 0px;
-border-radius: 20px 0px 0px 0px;
 opacity: 0px;
 
 
      }
-  
+
      .member-body-title{
       // margin-left: 100px;
+     width: 100%;
      }
-  
+
      .member-body-text{
       // margin-left: 100px;
-      // width: 100%;
-  
+      width: 100%;
+
      }
-   
+
 
      .member-steps{
       // display: grid;
@@ -831,17 +833,25 @@ opacity: 0px;
     //   // margin-left: 0px;
     //   /* Блоки 3 и 4 будут располагаться во втором ряду */
     // }
-    
+
     .block{
-      width: 164px;
-      height: 164px;
+      width: 174px;
+      height: 174px;
       margin-left: 0px;
-      
+
     }
     .member-body-text1{
       width: 100%;
     }
-    
+
+    .member-block-category-text{
+      width: 180px;
+    }
+
+    .member-block-category-title{
+      width: 100px;
+    }
+
 }
 
 @media screen and (max-width: 576px) {
@@ -851,13 +861,17 @@ opacity: 0px;
     }
 .member-block-category-title{
   font-size: 16px;
- 
+
  margin: 15px auto;
 }
 .member-block-category-text{
-  font-size: 12px;
-  width: 95%;
-  margin: 0 auto;
+  font-size: 15px;
+  width:  95px;
+  height: 5px;
+  margin-top: -15px;
+  margin-left: 10px;
+  display: flex;
+  text-align: center;
 }
   .member-title span{
     display: block;
@@ -907,6 +921,7 @@ margin: 0px;
 .img1{
   width: 100%;
   // height: 212px;
+  object-fit: cover;
 }
 .img3{
   width: 100%;
@@ -984,15 +999,16 @@ margin-top: 15px;
 }
 
 .block{
-  width: 150px;
-  height: 150px;
+  width: 129px;
+  height: 129px;
   margin-left: 0px;
   margin-right: 0;
+  // gap: 10px;
 }
 
 .member-text{
   width: 100%;
- 
+
 }
 
 .member-title{
@@ -1002,5 +1018,5 @@ margin-top: 15px;
 .container-abdialim{
   height: 120vh;
 }
- 
+
 }

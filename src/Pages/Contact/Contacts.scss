@@ -114,3 +114,27 @@
         }
     }
 }
+
+
+@media screen and (max-width:992px) {
+    .ContactsPage-elements-upperBlock-head {
+        font-size: 20px;
+        line-height: 100%;
+    }
+}
+
+@media screen and (max-width:576px){
+    .ContactsPage-elements-upperBlocks{
+        flex-wrap: wrap;
+    }
+    .ContactsPage-elements-upperBlock{
+        width: 100%;
+    }
+    .ContactsPage-elements-bottomBlock{
+        height: auto;
+    }
+    .ContactsPage{
+        margin-top: 150px;
+    }
+    
+}

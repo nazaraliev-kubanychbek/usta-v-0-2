@@ -41,7 +41,7 @@ const News = () => {
 
     return (
         <div className="container">
-            <div className="News padding-bottom">
+            <div className="News padding-bottom-50px">
                 <div className="News-head">
                     <div className="News-head-header">НОВОСТИ</div>
                     <div className="News-date">{card.date}</div>

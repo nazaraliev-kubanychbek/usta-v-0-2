@@ -328,6 +328,7 @@
     display: flex;
     justify-content: flex-end;
     transition: .5s;
+    z-index: 10;
   }
   .header-mobile-burger-show{
     right: 0;

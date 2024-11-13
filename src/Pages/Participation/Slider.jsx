@@ -1,22 +1,26 @@
 import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import img5 from '../assets/55.png';
-import img6 from '../assets/66.png';
+import img from "./imgs/Rectangle 88.png"; import img3 from "./imgs/Rectangle 88 (2).png"; // ПРОИМЕНОВАТЬ КАЖДУЮ КАРТИНКУ
+import img2 from "./imgs/Rectangle 88 (1).png";  import img4 from "./imgs/Rectangle 88 (3).png";
+import img5 from "./imgs/Rectangle 284 (8).png";  import img7 from "./imgs/Rectangle 284 (10).png";
+import img6 from "./imgs/Rectangle 284 (9).png";  import img8 from "./imgs/Rectangle 284 (11).png";
+import img10 from "./imgs/Rectangle 59 (1).png";  import right from "./imgs/slider-right.svg"
+import img11 from "./imgs/Rectangle 59 (2).png";  import left from "./imgs/slider-left.svg"
+
 import './styles/slider.scss';
 
 const slides = [
   { id: 1, title: 'Преимущества для сообщества', img: img5 },
   { id: 2, title: 'Преимущества для сообщества', img: img5 },
-  { id: 3, title: 'Преимущества для сообщества', img: img5 },
-  { id: 4, title: 'Преимущества для сообщества', img: img5 },
-  { id: 5, title: '222 col', img: img6 },
-  { id: 6, title: '222 col', img: img6 },
-  { id: 7, title: '222 col', img: img6 },
-  { id: 8, title: '222 col', img: img6 },
-  { id: 9, title: '333 col', img: img6 },
-  { id: 10, title: '333 col', img: img6 },
-  { id: 11, title: '333 col', img: img6 },
-  { id: 12, title: '333 col', img: img6 },
+  { id: 3, title: 'Преимущества для сообщества', img: img6 },
+  { id: 4, title: 'Преимущества для сообщества', img: img6 },
+  { id: 5, title: 'Преимущества для сообщества', img: img7 },
+  { id: 6, title: 'Преимущества для сообщества', img: img7 },
+  { id: 7, title: 'Преимущества для сообщества', img: img8 },
+  { id: 8, title: 'Преимущества для сообщества', img: img8 },
+  { id: 10, title: 'Преимущества для сообщества', img: img5 },
+  { id: 11, title: 'Преимущества для сообщества', img: img5 },
+  { id: 12, title: 'Преимущества для сообщества', img: img6 },
 ];
 
 const Slider = () => {
@@ -57,18 +61,9 @@ const Slider = () => {
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           onSlideChange={handleSlideChange}
           breakpoints={{
-            260: { slidesPerView: 1, spaceBetween: 8 },
-            320: { slidesPerView: 1., spaceBetween: 10 },
+            260: { slidesPerView: 1, spaceBetween: 40 },
 
-            // 360: { slidesPerView: 1.0, spaceBetween: 10 },
-            425: { slidesPerView: 1.1, spaceBetween: 10 },
-            430: { slidesPerView: 1.15, spaceBetween: 15 },
-            440: { slidesPerView: 1.20, spaceBetween: 15 },
-
-            450: { slidesPerView: 1.25, spaceBetween: 15 },
-            460: { slidesPerView: 1.30, spaceBetween: 15 },
-
-            470: { slidesPerView: 1.4, spaceBetween: 20 },
+            360: { slidesPerView: 1, spaceBetween: 20 },
 
             480: { slidesPerView: 1.4, spaceBetween: 20 },
             570: { slidesPerView: 1.6, spaceBetween: 20 },
@@ -81,7 +76,7 @@ const Slider = () => {
           {slides.map((slide) => (
             <SwiperSlide key={slide.id}>
               <div className="slide-item">
-                <img className='slide-img' src={slide.img} alt={slide.title} />
+                <img src={slide.img} alt={slide.title} />
                 <p className="slide-item-p">{slide.title}</p>
               </div>
             </SwiperSlide>

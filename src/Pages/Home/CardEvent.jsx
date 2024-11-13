@@ -48,6 +48,7 @@ function Slider({ name, cards = [] }) {
     const navigate = useNavigate();
     const swiperRef = useRef(null);
     const [slidesPerView, setSlidesPerView] = useState(4);
+    const [spaceBetween, setSpaceBetween] = useState(150);
 
     const handleCardClick = (id) => {
         navigate(`/news/${id}`);
@@ -62,7 +63,7 @@ function Slider({ name, cards = [] }) {
     };
 
     useEffect(() => {
-        const updateSlidesPerView = () => {
+        const updateSliderSettings = () => {
             const width = window.innerWidth;
 
             if (width < 600) {
@@ -76,10 +77,20 @@ function Slider({ name, cards = [] }) {
             }
         };
 
-        updateSlidesPerView();
-        window.addEventListener("resize", updateSlidesPerView);
+        updateSliderSettings();
+        window.addEventListener("resize", updateSliderSettings);
 
-        return () => window.removeEventListener("resize", updateSlidesPerView);
+        return () => window.removeEventListener("resize", updateSliderSettings);
+    }, []);
+
+    useEffect(() => {
+        const updateSpaceBetween = () => {
+            setSpaceBetween(window.innerWidth < 768 ? 120 : 30);
+        };
+
+        window.addEventListener("resize", updateSpaceBetween);
+
+        return () => window.removeEventListener("resize", updateSpaceBetween);
     }, []);
 
     return (
@@ -103,15 +114,14 @@ function Slider({ name, cards = [] }) {
                             />
                         </div>
                     </div>
-                    <Swiper className="slider-cards"
+                    <Swiper
+                        className="slider-cards"
                         ref={swiperRef}
-                        spaceBetween={30}
+                        spaceBetween={spaceBetween}
                         slidesPerView={slidesPerView}
                         loop
                     >
-
                         {cards.map((card, index) => (
-
                             <SwiperSlide key={index}>
                                 <div onClick={() => handleCardClick(index)}>
                                     <Card
@@ -123,17 +133,15 @@ function Slider({ name, cards = [] }) {
                                         text={card.text}
                                     />
                                 </div>
-
                             </SwiperSlide>
-
                         ))}
-
                     </Swiper>
                 </div>
             </div>
         </div>
     );
 }
+
 
 export default Slider;
 
@@ -337,14 +345,37 @@ function Partners({ img }) {
 
 function PartnersTab({ partners = [] }) {
     const [PartnersPerView, setPartnersPerView] = useState(7);
+    const [spaceBetween, setSpaceBetween] = useState(30);
     const swiperRef = useRef(null);
+
+    useEffect(() => {
+        const updateSpaceBetween = () => {
+            let newSpaceBetween = window.innerWidth < 770 ? 160 : 110;
+            newSpaceBetween = window.innerWidth < 768 ? 170 : 140;
+            newSpaceBetween = window.innerWidth < 600 ? 150 : 130;
+            newSpaceBetween = window.innerWidth < 512 ? 10 : 120;
+            newSpaceBetween = window.innerWidth < 380 ? 180 : 180;
+            setSpaceBetween(newSpaceBetween);
+
+            // Обновление Swiper вручную
+            if (swiperRef.current?.swiper) {
+                swiperRef.current.swiper.params.spaceBetween = newSpaceBetween;
+                swiperRef.current.swiper.update();
+            }
+        };
+
+        updateSpaceBetween();
+        window.addEventListener("resize", updateSpaceBetween);
+
+        return () => window.removeEventListener("resize", updateSpaceBetween);
+    }, []);
 
     useEffect(() => {
         const updatePartnersPerView = () => {
             const width = window.innerWidth;
 
-            if (width < 600) {
-                setPartnersPerView(2);
+            if (width < 768) {
+                setPartnersPerView(3);
             } else if (width < 1024) {
                 setPartnersPerView(4);
             } else if (width < 1400) {
@@ -352,13 +383,19 @@ function PartnersTab({ partners = [] }) {
             } else {
                 setPartnersPerView(7);
             }
+
+            // Обновление Swiper вручную
+            if (swiperRef.current?.swiper) {
+                swiperRef.current.swiper.params.slidesPerView = PartnersPerView;
+                swiperRef.current.swiper.update();
+            }
         };
 
         updatePartnersPerView();
         window.addEventListener("resize", updatePartnersPerView);
 
         return () => window.removeEventListener("resize", updatePartnersPerView);
-    }, []);
+    }, [PartnersPerView]);
 
     return (
         <div className="padding">

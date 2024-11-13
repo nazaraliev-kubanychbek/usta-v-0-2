@@ -120,10 +120,10 @@ function Membership() {
           <div className='member-steps padding-bottom'>
 
 
-            <div className="block"><h1 className='member-block-category-title'>ШАГ №1</h1><p className='member-block-category-text'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim. </p></div>
-            <div className="block"><h1 className='member-block-category-title'>ШАГ №1</h1><p className='member-block-category-text'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim. </p></div>
-            <div className="block"><h1 className='member-block-category-title'>ШАГ №1</h1><p className='member-block-category-text'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim. </p></div>
-            <div className="block"><h1 className='member-block-category-title'>ШАГ №1</h1><p className='member-block-category-text'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim. </p></div>
+            <div className="block"><h1 className='member-block-category-title'>ШАГ №1</h1><p className='member-block-category-text'>Свяжитесь с нами. </p></div>
+            <div className="block"><h1 className='member-block-category-title'>ШАГ №2</h1><p className='member-block-category-text'> Ожидайте быстрый ответ.</p></div>
+            <div className="block"><h1 className='member-block-category-title'>ШАГ №3</h1><p className='member-block-category-text'>Оплатите выбранный тариф </p></div>
+            <div className="block"><h1 className='member-block-category-title'>ШАГ №4</h1><p className='member-block-category-text'>Вступайте в сообщество. </p></div>
           </div>
 
         </div>

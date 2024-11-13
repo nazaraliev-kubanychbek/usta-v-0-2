@@ -5,6 +5,7 @@ import img5 from "./imgs/Rectangle 284 (8).png";  import img7 from "./imgs/Recta
 import img6 from "./imgs/Rectangle 284 (9).png";  import img8 from "./imgs/Rectangle 284 (11).png";
 import img10 from "./imgs/Rectangle 59 (1).png";  import right from "./imgs/slider-right.svg"
 import img11 from "./imgs/Rectangle 59 (2).png";  import left from "./imgs/slider-left.svg"
+import Slider from './Slider';
 
 function Participation() {
   return (
@@ -53,31 +54,18 @@ function Participation() {
         </div>
       </div>
       </div>
-         <div className='Participation-gap'>
+      <div className='Participation-gap'>
             <h3 className='Participation-gap-text'>награды за достижения в инженерной сфере</h3>
             <div className="Participation-btn">
-            <img src={left} class="slider-btn-icon"></img>
-            <img src={right} class="slider-btn-icon"></img>
+
+            {/* <button src={left} class="slider-btn-icon"></button>
+            <button src={right} class="slider-btn-icon"></button> */}
+            
         </div>
-          <div className="Participation-img-text">
-            <div className="Participation-item">
-               <img src={img5} alt="" />
-               <p className='Participation-p'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim.</p>
-            </div>
-           <div className="Participation-item">
-               <img src={img6} alt="" />
-               <p className='Participation-p'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim.</p>
-            </div>
-           <div className="Participation-item">
-              <img src={img7} alt="" />
-              <p className='Participation-p'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim.</p>
-            </div>
-             <div className="Participation-item">
-              <img src={img8} alt="" />
-              <p className='Participation-p'>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim.</p>
-           </div>
-         </div>
+      
        </div>
+ <Slider />
+      
        <div className="Participation-program">
       <h1 className="Participation-program-text-h3">Программы наставничества</h1>
       <div className="Participation-program-con">

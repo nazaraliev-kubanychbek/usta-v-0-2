@@ -1,0 +1,113 @@
+.video-content-container, .video-content-container-2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+    .col-6 {
+    flex: 0 0 50%; // Делит ширину контейнера на 2
+    max-width: 50%;
+    padding: 10px;
+    }
+
+    /* Стили для изображений и текстовых блоков */
+    img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    }
+
+    .text-video1, .text-video2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #333; /* Цвет текста по умолчанию */
+    }
+    }
+}
+
+/* Адаптивные стили для ширины до 992px */
+@media (max-width: 992px) {
+    .video-content-container, .video-content-container-2 {
+    .col-6 {
+        padding: 8px; // Уменьшаем отступы для более компактного размещения
+    }
+
+    .text-video1 h1, .text-video2 h1 {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 1.4rem; // Немного уменьшаем заголовок
+    }
+
+    .text-video1 p, .text-video2 p {
+        font-size: 0.95rem; // Уменьшаем шрифт текста
+        font-family: Helvetica, Arial, sans-serif;
+        color: black; /* Меняем цвет текста на красный */
+    }
+    }
+}
+
+/* Адаптивные стили для ширины до 768px */
+@media (max-width: 768px) {
+    .video-content-container, .video-content-container-2 {
+    .col-6 {
+        padding: 8px; // Уменьшаем отступы для более компактного размещения
+    }
+
+    .text-video1 h1, .text-video2 h1 {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 1.4rem; // Немного уменьшаем заголовок
+    }
+
+    .text-video1 p, .text-video2 p {
+        font-size: 0.95rem; // Уменьшаем шрифт текста
+        font-family: Helvetica, Arial, sans-serif;
+        color: black; /* Меняем цвет текста на красный */
+    }
+    }
+}
+
+/* Адаптивные стили для ширины до 576px */
+@media (max-width: 576px) {
+    .video-content-container, .video-content-container-2 {
+    /* Изменение структуры на мобильных устройствах */
+    .col-6 {
+        flex: 0 0 100%; // Устанавливаем картинку на всю ширину
+        max-width: 100%;
+    }
+
+    /* Изображение на всю ширину */
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Текст под картинкой */
+    .text-video1, .text-video2 {
+        font-family: Helvetica, Arial, sans-serif;
+        order: 1; // Сдвигаем текст под изображение
+        padding: 15px; // Увеличиваем отступы, чтобы текст не прилегал к изображению
+    }
+
+    .text-video1 h1, .text-video2 h1 {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 1.2rem; // Уменьшаем размер заголовка
+    }
+
+    .text-video1 p, .text-video2 p {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 0.9rem; // Уменьшаем размер текста
+        color: black; /* Меняем цвет текста на красный */
+    }
+    }
+}
+
+

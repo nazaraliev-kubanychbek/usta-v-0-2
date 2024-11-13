@@ -1,5 +1,6 @@
 import React from 'react';
 import './Events.scss';
+import './Adaptation/Adaptation.scss';
 import rectangleImage102 from './images/Rectangle 102.png';
 import rectangleImage111 from './images/Rectangle 111.png';
 import rectangleImage222 from './images/Rectangle 222.png';
@@ -25,26 +26,28 @@ const Events = () => {
       <div className='container'>
         <div className="events-container">
           <div className='event-section'>
-           <div className='event-text'>
-            <h1>Мероприятие</h1>
-            <h2>Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim. Praesent turpis odio rutrum platea egestas duis turpis nunc. Non vitae ac risus molestie tristique molestie enim volutpat. Vehicula iaculis sem velit accumsan velit.</h2>
-           </div>
+            <div className='event-text'>
+              <h1>Мероприятие</h1>
+              <h2>
+                Наши ключевые мероприятия направлены на совершенствование строительных процессов и внедрение инновационных технологий в строительную отрасль. Мы постоянно работаем над улучшением качества, безопасности и эффективности всех этапов реализации проектов, от планирования до завершения. Присоединяйтесь к нам, чтобы узнать о последних тенденциях в строительстве и наших успешных проектах.
+              </h2>
+            </div>
             <div className='images'>
               <li>
                 <img src={rectangleImage102} alt="Rectangle 102" />
-                <p>мероприятия</p>
+                <p>Мероприятие</p>
               </li>
               <li>
                 <img src={rectangleImage111} alt="Rectangle 111" />
-                <p>мероприятия</p>
+                <p>Мероприятие</p>
               </li>
               <li>
                 <img src={rectangleImage222} alt="Rectangle 222" />
-                <p>анонсы</p>
+                <p>Анонсы</p>
               </li>
               <li>
                 <img src={rectangleImage222} alt="Rectangle 222" />
-                <p>анонсы</p>
+                <p>Анонсы</p>
               </li>
             </div>
           </div>
@@ -78,35 +81,33 @@ const Events = () => {
             </ul>
           </div>
 
-          <div className='video-content-container'>
-            <a href="https://m.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUO0YDQuNC60YDQvtC70Ls%3D" target="_blank" rel="noopener noreferrer">
-              <img src={rectangleImage777} alt="Rectangle 777" className="video1" />
-            </a>
-            <div className='text-video1'>
-              <h1 className='title-text-video1'>Lorem ipsum dolor sit amet consectetur.</h1>
+          <div className='video-content-container row'>
+            <div className="col-6">
+              <a href="https://m.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUO0YDQuNC60YDQvtC70Ls%3D" target="_blank" rel="noopener noreferrer">
+                <img src={rectangleImage777} alt="Rectangle 777" className="video1" />
+              </a>
+            </div>
+            <div className="col-6 text-video1">
+              <h1 className='title-text-video1'>Будущее строительства: инновации и технологии</h1>
               <p className='text-video22'>
-                Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim. 
-                Praesent turpis odio rutrum platea egestas duis turpis nunc. 
-                Non vitae ac risus molestie tristique molestie enim volutpat. 
-                Vehicula iaculis sem velit accumsan velit.
-              </p>
+              Наши мероприятия направлены на развитие строительной отрасли, внедрение новых технологий и повышение качества и безопасности проектов. Присоединяйтесь к нам, чтобы быть в курсе последних тенденций.              </p>
             </div>
           </div>
 
-          <div className='video-content-container-2'>
-            <div className='text-video2'> 
-              <h1 className='title-text-video2'>Lorem ipsum dolor sit amet consectetur.</h1>
+          <div className='video-content-container-2 row'>
+            <div className="col-6 text-video2">
+              <h1 className='title-text-video2'>Будущее строительства: инновации и технологии.</h1>
               <p className='text-video3'>
-                Lorem ipsum dolor sit amet consectetur. Sed porttitor amet aenean enim. 
-                Praesent turpis odio rutrum platea egestas duis turpis nunc. 
-                Non vitae ac risus molestie tristique molestie enim volutpat. 
-                Vehicula iaculis sem velit accumsan velit.
+              Наши мероприятия направлены на развитие строительной отрасли, внедрение новых технологий и повышение качества и безопасности проектов. Присоединяйтесь к нам, чтобы быть в курсе последних тенденций.
               </p>
             </div>
-            <a href="https://m.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUO0YDQuNC60YDQvtC70Ls%3D" target="_blank" rel="noopener noreferrer">
-              <img src={rectangleImage888} alt="Rectangle 888" className="video2" />
-            </a>
+            <div className="col-6">
+              <a href="https://m.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUO0YDQuNC60YDQvtC70Ls%3D" target="_blank" rel="noopener noreferrer">
+                <img src={rectangleImage888} alt="Rectangle 888" className="video2" />
+              </a>
+            </div>
           </div>
+
         </div>
       </div>
     </div>

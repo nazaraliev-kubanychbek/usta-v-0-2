@@ -5,7 +5,10 @@
 }
 
 body {
+  font-family: Helvetica;
+
   overflow-x: hidden; // Скрыть горизонтальный скролл
+  
 }
 
 .header {
@@ -93,32 +96,58 @@ body {
   }
 }
 
-.container-title {
-  padding: 20px;
-  width: 700px;
-  margin: 300px 90px;
-}  
-.title-header {
-  font-family: Helvetica;
-  font-size: 50px;
-  font-weight: 400;
-  line-height: 50px;
-  letter-spacing: -0.06em;
-  text-align: left;
-  color: #fff;
-}
+  .container-title {
+    padding: 20px;
+    width: 700px;
+    margin: 300px 90px;
+  }  
+  .title-header {
+    font-family: Helvetica;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: -0.06em;
+    text-align: left;
+    color: #fff;
+    @media screen and (max-width: 1200px) {
+      transform: translate(-55px);
+  }
+    @media screen and (max-width: 992px) {
+      transform: translate(-40px);
+  }
+    @media screen and (max-width: 768px) {
+      transform: translate(60px);
+  }
+    @media screen and (max-width: 576px) {
+      transform: translate(-50px);
+      width: 200px;
+    }
+  }
 
-.text-header {
-  font-family: Helvetica;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: -0.02em;
-  text-align: left;
-  color: rgb(194, 182, 182);
-  max-width: 600px;   /* Ограничивает ширину текста */
-  padding-bottom: 20px;
-}
+  .text-header {
+    font-family: Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: rgb(194, 182, 182);
+    max-width: 600px;   /* Ограничивает ширину текста */
+    padding-bottom: 20px;
+    @media screen and (max-width: 1200px) {
+      transform: translate(-55px);
+  }
+    @media screen and (max-width: 992px) {
+      transform: translate(-40px);
+  }
+    @media screen and (max-width: 768px) {
+      transform: translate(60px);
+  }
+    @media screen and (max-width: 576px) {
+      transform: translate(-50px);
+      width: 200px;
+    }
+  }
 
 .btn-header-title {
   font-family: Helvetica;
@@ -169,47 +198,80 @@ body {
 
 .events {
   .images {
-    display: flex;
-    justify-content: space-between;
+    display: flex;  /* Выставляем флекс-контейнер */
+    justify-content: flex-start;  /* Выравниваем элементы по левому краю */
     align-items: flex-start;
     list-style-type: none;
     padding: 0;
     margin: 0;
+    overflow-x: auto;  /* Включаем горизонтальную прокрутку */
+    -webkit-overflow-scrolling: touch;  /* Плавный скролл для iOS */
+    scroll-behavior: smooth;  /* Плавная прокрутка */
+    gap: 10px;  /* Добавляем промежуток между изображениями */
 
-    li {
-        flex: 1;
-        margin: 0 5px;
+    /* Скрыть полосу прокрутки */
+    scrollbar-width: thin;  /* Для Firefox */
+    scrollbar-color: transparent transparent;  /* Для Firefox */
+  }
 
-        img {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-        }
+  .images li {
+    flex: 0 0 auto;  /* Убираем возможность растягивания элементов */
+    margin: 0 5px;
 
-        p {
-            margin-top: 5px;
-            font-size: 18px;
-        }
+    img {
+      width: 100%;
+      max-width: 300px;  /* Ограничиваем максимальную ширину */
+      height: auto;
+      object-fit: cover;  /* Заполняем изображение в блок, сохраняя пропорции */
     }
 
-    // Адаптация для экрана с шириной 992px и меньше
-    @media screen and (max-width: 992px) {
-        .container {
-            max-width: 720px;
-        }
-
-        // li:nth-child(4) {
-        //     display: none; 
-        // }
-
-        li {
-            width: calc(100% / 3 - 10px); 
-        }
+    p {
+      margin-top: 5px;
+      font-size: 18px;
     }
+  }
+
+  /* Адаптация для экрана с шириной 992px и меньше */
+  @media screen and (max-width: 992px) {
+    .images li {
+      width: calc(100% / 3 - 10px);  /* 3 изображения на экране */
+    }
+  }
+
+  /* Адаптация для экрана с шириной 768px и меньше */
+  @media screen and (max-width: 768px) {
+    .images li {
+      width: calc(100% / 2 - 10px);  /* 2 изображения на экране */
+    }
+  }
+
+  /* Адаптация для экрана с шириной 576px и меньше */
+  @media screen and (max-width: 576px) {
+    .images li {
+      width: 80%;
+      margin: 0;  /* Убираем лишний отступ */
+    }
+
+    .images {
+      gap: 10px;  /* Уменьшаем отступ между изображениями */
+    }
+  }
+
+  /* Скрытие полосы прокрутки для браузеров Webkit (Chrome, Safari и другие) */
+  .images::-webkit-scrollbar {
+    height: 0px;  /* Убираем вертикальную полосу прокрутки */
+    width: 0px;   /* Убираем горизонтальную полосу прокрутки */
+  }
+
+  .images::-webkit-scrollbar-thumb {
+    background: transparent;  /* Прокрутка будет невидимой */
+  }
+
+  .images::-webkit-scrollbar-track {
+    background: transparent;  /* Фон прокрутки невидимый */
+  }
 }
 
-  
-}
 
 .event-title {
   text-align: left;
@@ -219,12 +281,7 @@ body {
   color: #0d0000;
 }
 
-.event-description {
-  width: 640px;
-  height: 96px;
-  text-align: left;
-  color: rgba(0, 0, 0, 0.5);
-}
+
 
 .dots-container {
   display: flex;
@@ -263,141 +320,6 @@ body {
   padding: 5px;
 }
 
-.video-content-container {
-  display: flex;
-  align-items: center;
-  margin: 20px;
-
-  .video1 {
-    max-width: 640px;
-    height: auto;
-    cursor: pointer;
-    margin-right: 20px;
-  }
-
-  .text-video1 {
-    flex: 1;
-
-   
-    .text-video1 {
-      padding-bottom: 15px;
-      width: 640px;
-      height: 96px;
-      opacity: 0;
-      text-align: left;
-      color: rgba(0, 0, 0, 0.5);
-      
-    }
-  }
-}
-
-.video-content-container-2 {
-   margin-bottom: 20px;  
-   .title-text-video2 {
-     font-family: Helvetica;
-     font-weight: bold;
-     color: #000;
-     margin: -200px 0 0 0;
-     padding-bottom: 15px;  
-     @media screen and (max-width: 992px){
-      color: rgb(234, 14, 14);
-      transform: translate(75px,203px);
-      font-size: 18px;
-      font-family: Helvetica;
-     }
-  }
-
-  .text-video3 {
-    font-family: Helvetica;
-    width: 640px;
-    height: auto;
-    opacity: 1;
-    text-align: left;
-    color: rgba(0, 0, 0, 0.9);
-    margin-bottom: 15px;
-    @media screen and (max-width: 992px){
-      font-family: Helvetica;
-      width: 420px;
-      color: rgb(132, 118, 118);
-      transform: translate(15px,220px,);
-      font-size: 17px;
-      margin-top: -30px;
-      
-     }
-}
-}
-
-.key-annual-events {
-  max-width: 1430px; // Максимальная ширина контейнера
-  margin: 0 auto; // Центрируем контейнер на странице
-  padding: 20px;
-  border-radius: 8px; // Закругление углов
-
-  .key-annual-title {
-      font-size: 40px;
-      margin-bottom: 20px;
-      color: #000000;
-      font-family: Helvetica;
-  }
-
-  .images-1 {
-      display: flex;
-      justify-content: flex-start; // Выравниваем элементы в начале
-      flex-wrap: nowrap; // Не разрешаем перенос элементов на следующую строку
-      gap: 15px; // Расстояние между элементами
-      overflow-x: auto; // Добавляем горизонтальную прокрутку
-      padding-bottom: 10px; // Отступ для предотвращения наложения на содержимое
-
-      li {
-          list-style: none; // Убираем маркеры списка
-          flex: 0 0 calc(25% - 15px); // Каждый элемент занимает 25% ширины контейнера с учетом отступов
-          box-sizing: border-box;
-          text-align: center;
-
-          img {
-              width: 100%; // Устанавливаем ширину на 100%
-              height: 200px; // Устанавливаем фиксированную высоту
-              border-radius: 8px;
-              object-fit: cover; // Изображения сохраняют пропорции и обрезаются при необходимости
-          }
-
-          p {
-              margin-top: 10px;
-              font-size: 16px;
-              color: black;
-              font-family: Helvetica;
-          }
-      }
-  }
-
-  // Адаптация для экрана с шириной 992px и меньше
-  @media screen and (max-width: 992px) {
-      .key-annual-events {
-          max-width: 100vw; // Занимаем всю ширину экрана
-          padding: 0; // Убираем внутренние отступы
-      }
-
-      .images-1 {
-          gap: 10px; // Уменьшаем расстояние между элементами
-      }
-
-      .images-1 li {
-          flex: 0 0 calc(50% - 10px); // Устанавливаем ширину для 2 элементов в строке на меньших экранах
-          margin: 0; 
-      }
-
-      .images-1 img {
-          height: 200px; // Фиксированная высота для изображений
-          border-radius: 0; // Убираем закругление углов
-      }
-  }
-  @media screen and (max-width: 768px){
-    width: 900px;
-  }
-}
-
-
-
 .events-container {
   width: 100%;
   height: auto;
@@ -408,42 +330,15 @@ body {
   text-align: center;
 }
 
-
-
-.images, .images-1 {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  padding: 0;
-}
-
-.images li, .images-1 li {
-  width: 24%;
-}
-
-.video-content-container,
-.video-content-container-2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 40px;
-
-  // Адаптивные стили для экрана 992px и меньше
-  @media screen and (max-width: 992px) {
-      flex-direction: column; // Переключаем на столбец для более компактного расположения
-      align-items: flex-start; // Выравниваем элементы по левому краю
-      margin-top: 20px; // Уменьшаем верхний отступ
-  }
-}
-
-
 .video1, .video2 {
   width: 45%;
 }
 .dots-container {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  @media screen and (max-width: 576px) {
+
+  }
 }
 
 .dot {
@@ -452,39 +347,60 @@ body {
   background-color: gray;
   border-radius: 50%;
   margin: 3px;
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
   margin-top: 50px;
 }
 .black-dot {
   background-color: black;
 }
-.images {
-  font-family: Helvetica;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+/* Адаптация для экранов с шириной 992px и меньше */
+@media screen and (max-width: 992px) {
+  .images {
+    gap: 10px; /* Уменьшаем расстояние между элементами */
+  }
 
-  li {
-    flex: 1;
-    margin: 0 5px;
+  .images li {
+    flex: 0 0 calc(33.33% - 10px); /* Три изображения в ряду */
+  }
 
-    img {
-      width: 100%;
-      max-width: 300px; // Замените на нужный размер
-      height: auto;
-    }
-
-    p {
-      margin-top: 5px;
-      font-size: 18px;
-      font-family: Helvetica;
-
-    }
+  .images img {
+    max-width: 100%;
+    height: auto;
   }
 }
+
+/* Адаптация для экранов с шириной 768px и меньше */
+@media screen and (max-width: 768px) {
+  .images {
+    gap: 8px; /* Уменьшаем расстояние между элементами */
+  }
+
+  .images li {
+    flex: 0 0 calc(50% - 8px); /* Два изображения в ряду */
+  }
+
+  .images img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Адаптация для экранов с шириной 576px и меньше */
+@media screen and (max-width: 576px) {
+  .images {
+    gap: 6px; /* Еще меньше расстояние между элементами */
+  }
+
+  .images li {
+    flex: 0 0 calc(100% - 6px); /* Одно изображение на всю ширину */
+  }
+
+  .images img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 .video-content-container img {
     width: 640px;
     max-width: 910px; // или другой размер, если необходимо
@@ -506,111 +422,159 @@ body {
   width: 100%;
   height: 891px;
   background-image: url('./images/Rectangle 999.png');
-  padding: 70px 75px 150px;
-  gap: 40px;
+  padding: 110px 75px 150px;
+  gap: 20px;
   margin-bottom: 100px;  
   @media screen and (max-width: 768px) {
-    width: 100vh;
+    width: 100%;
 } 
 }
+
+.key-annual-events {
+  max-width: 1430px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+
+  .key-annual-title {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #000000;
+    font-family: Helvetica;
+  }
+
+  .images-1 {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-behavior: smooth; // Плавная прокрутка
+
+    /* Стиль для прокрутки на мобильных устройствах */
+    &::-webkit-scrollbar {
+      height: 8px; // Высота полосы прокрутки
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.2); // Цвет полосы прокрутки
+      border-radius: 4px; // Закругление углов полосы прокрутки
+    }
+
+
+    li {
+      list-style: none;
+      flex: 0 0 calc(25%);
+      box-sizing: border-box;
+      text-align: center;
+
+      img {
+        width: 229px;
+        height: 177px;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+
+      p {
+        margin-top: 10px;
+        font-size: 20px;
+        color: black;
+        font-family: Helvetica;
+      }
+    }
+  }
+
+  // Адаптация для экранов с шириной 992px и меньше
+  @media screen and (max-width: 992px) {
+    .key-annual-events {
+      max-width: 100%;
+      padding: 10px;
+    }
+
+    .images-1 {
+      gap: 10px;
+    }
+
+    .images-1 li {
+      flex: 0 0 calc(33.33% - 10px);
+      margin: 0;
+    }
+
+    .images-1 img {
+      height: auto;
+      border-radius: 5px;
+    }
+  }
+
+  // Адаптация для экранов с шириной 768px и меньше
+  @media screen and (max-width: 768px) {
+    .key-annual-events {
+      max-width: 100%;
+      padding: 5px;
+    }
+
+    .images-1 {
+      gap: 8px; // Уменьшаем расстояние между изображениями
+      overflow-x: scroll;
+    }
+
+    .images-1 li {
+      flex: 0 0 calc(50% - 8px);
+    }
+
+    .images-1 img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+  }
+
+  // Адаптация для экранов с шириной 576px и меньше
+  @media screen and (max-width: 576px) {
+    .key-annual-events {
+      max-width: 100%;
+      padding: 5px;
+    }
+
+    .images-1 { 
+      gap: 8px; // Уменьшаем расстояние между элементами
+      overflow-x: scroll;
+      -webkit-overflow-scrolling: touch; // Плавный скролл для мобильных устройств
+    }
+
+    .images-1 li {  
+      flex: 0 0 60%; // Одно фото на всю ширину
+    }
+
+    .images-1 img {
+      width: 100%; // Увеличиваем ширину изображения
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .key-annual-title {
+      transform: translate(-22px);
+      font-family: Helvetica;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .images-1 p {
+      font-size: 14px;
+      margin-top: 8px;
+    }
+  }
+}
+
+
 .event-text h1{
-font-family: Helvetica;
-font-size: 40px;
-font-weight: 400;
-line-height: 40px;
-letter-spacing: -0.04em;
-text-align: left;
-color:black;
-margin-bottom: 10px;
-@media screen and (max-width: 768px) {
-  margin-left: 10px;
-}
-}
-.event-text h2 {
+  color: black;
   font-family: Helvetica;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: -0.02em;
-  text-align: left;
-  color: #00000080;
-  max-width: 640px;   
-  margin-bottom: 40px;
-  @media screen and (max-width: 768px) {
-    margin-left: 14px;
-  }
+  font-size: 40px;
 }
-
-
-.text-video22 {
-font-family: Helvetica;
-  width: 530px;
-  height: auto;
-  opacity: 1;
-  text-align: left;
-  color: rgba(72, 54, 54, 0.9);  
-  @media screen and (max-width: 992px){
-    width: 400px;
-    margin-top: -80px;
-    transform: translate(500px);
-    font-size: 17px;
-    line-height: 18.7px;
-    size: 17px;
-  } 
-}
-
-.video-content-container-2 img {
-width: 640px;
-max-width: 910px; // или другой размер, если необходимо
-
-// Адаптивные стили
-@media screen and (max-width: 992px) {
-    width: 467px; // Устанавливаем ширину на 350px для адаптации под экран
-    max-width: 100%; // Устанавливаем максимальную ширину на 100%
-    margin-left: 450px;
-}
-}
-.title-text-video1 {
-font-family: Helvetica;
-// font-size: 24px;
-font-weight: bold;
-color: #000;
-margin: -200px 0 0 0;
-padding-bottom: 15px;
-@media screen and (max-width: 992px){
-  color: red;
-  font-size: 18px;
-  // margin-left: 400px;
-  padding-bottom: 0px;
-  transform: translate(500px,-90px);
-}
-}
-
-
-
-@media screen and (max-width: 992px) {
-.text-video2 {
-}
-}
-
-
-
-
-.event-section {
-  @media screen and (max-width: 768px) {
-    .images {
-      width: 890px;
-      display: flex;
-      overflow-x: auto; /* Добавляем горизонтальный скролл */
-      -webkit-overflow-scrolling: touch; /* Плавный скролл для мобильных устройств */
-      padding-bottom: 10px; /* Небольшое пространство внизу для скролла */
-    }
-
-    .images li {
-      width: 500px; /* Ширина для каждого элемента (можно настроить) */
-      margin-right: -160px; /* Отступ между элементами */
-      margin-left: 20px;
-      flex: 0 0 auto; /* Устанавливаем фиксированную ширину для прокрутки */
-    }
-  }
+.event-text h2{
+  color:#00000080;
+  font-family: Helvetica;
+  font-size: 17px;
+  margin-bottom: 25px;
 }
