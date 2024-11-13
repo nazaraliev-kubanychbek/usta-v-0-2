@@ -90,8 +90,8 @@ function Slider({ name, cards = [] }) {
                         <div className="slider-row-name">{name}</div>
                         <div className="slider-btn">
                             <img
-                                src={sliderIconLeft}
-                                className="slider-btn-icon"
+                                src={sliderIconRight}
+                                className="slider-btn-icon flipped"
                                 onClick={handlePrevSlide}
                                 alt="Previous Slide"
                             />
@@ -185,7 +185,7 @@ function BigBlockAlt({ head, img1, img2, img3, img4, subhead, subheadTag = "h1",
                     <div className="bigBlock-text-alt">
                         <div>
                             <SubheadTag style={{ marginBlock: "0px", marginBlockStart: "0px", marginBlockEnd: "0px", margin: "0px" }}>{subhead}</SubheadTag>
-                            <p dangerouslySetInnerHTML={{ __html: p }} />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                            <p dangerouslySetInnerHTML={{ __html: p }} />
                         </div>
                         {btn === "true" && (
                             <div className="bigBlock-text-btn"><a href={URL}>ПОДРОБНЕЕ</a></div>
@@ -226,7 +226,7 @@ function BigBlockAltReverse({ head, img1, img2, img3, img4, subhead, subheadTag 
 }
 
 function BigBlockReverse({ head, img1, img2, img3, img4, subhead, subheadTag = "h1", p, btn, URL }) {
-    const SubheadTag = subheadTag; // Dynamic tag based on prop
+    const SubheadTag = subheadTag;
 
     return (
         <div className="padding-100px">
@@ -279,8 +279,7 @@ function InfoBlockReverse({ head, p, InfoImg, URL }) {
         <div className="padding-100px">
             <div className="container">
                 <div
-                    className="InfoBlock"
-                    style={{ flexDirection: "row-reverse" }}
+                    className="InfoBlock reverse"
                 >
                     <div className="InfoBlock-img">
                         <img src={InfoImg} />
@@ -369,7 +368,7 @@ function PartnersTab({ partners = [] }) {
                     <div className="Partners-list">
                         <Swiper
                             ref={swiperRef}
-                            spaceBetween={20}
+                            spaceBetween={10}
                             slidesPerView={PartnersPerView}
                             loop
                         >

@@ -81,6 +81,10 @@ h1 {
     .padding {
         padding: 50px 0px;
 
+        &-100px {
+            padding: 25px 0px;
+        }
+
         &-top {
             padding-top: 50px;
         }

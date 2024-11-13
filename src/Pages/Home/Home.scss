@@ -78,13 +78,18 @@
                 width: 136px;
                 display: flex;
 
+                .slider-btn-icon.flipped {
+                    transform:scaleX(-1);
+                }
+
                 img {
+
+                    &:active {
+                        filter: opacity(60%);
+                    }
+
                     cursor: pointer;
                     transition: filter 0.15s;
-
-                    &.clicked {
-                        filter: grayscale(100%);
-                    }
                 }
             }
         }
@@ -96,6 +101,7 @@
             &-card {
                 padding-top: 40px;
                 width: 310px;
+                cursor: pointer;
 
                 &__img {
                     width: 310px;
@@ -165,7 +171,7 @@
             gap: 20px;
         }
 
-        &-text {
+        &-text, &-text-alt {
             width: 640px;
             padding: 0px 20px;
             display: flex;
@@ -360,27 +366,48 @@
             display: flex;
             text-align: center;
             padding: 20px 20px;
-            margin-top: 40px;
+            margin-top: 20px;
             flex-wrap: wrap;
             justify-content: center;
+            overflow: visible;
 
             &-partners {
+                margin: 10px;
                 border-radius: 50%;
                 border: 1px solid #00000030;
                 padding: 60px 25px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                transition: transform 0.3s ease, margin 0.3s ease;
+                width: 160px;
+                height: 160px;
 
                 img {
-                    width: 110px;
+                    width: 100%;
                     height: 40px;
                     display: flex;
+                }
+            }
+
+            &-partners:hover {
+                transform: scale(1.1); /* Увеличиваем текущий элемент */
+                z-index: 10; /* Поверх других элементов */
+            }
+            /* Смещение соседних элементов */
+            &-partners:hover ~ &-partners {
+                margin-left: 20px; /* Сдвигаем вправо */
+            }
+            /* Сдвиг предыдущих элементов */
+            &-partners {
+                &:nth-child(n + 2):hover {
+                    margin-right: 20px; /* Сдвиг предыдущих элементов влево */
                 }
             }
         }
     }
 }
+
 
 @media screen and (max-width: 1920px) {
     .home {
@@ -1296,8 +1323,6 @@
             }
 
             &-cards {
-
-
                 //.swiper-wrapper {
                 //    display: flex;
                 //    justify-content: center;
@@ -1808,8 +1833,6 @@
             }
 
             &-cards {
-
-
                 //.swiper-wrapper {
                 //    display: flex;
                 //    justify-content: center;
@@ -1877,6 +1900,7 @@
 
         .bigBlock {
             width: 100%;
+            //height: 1150px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -1885,7 +1909,7 @@
                 display: flex;
                 flex-direction: column;
                 width: 100%;
-                height: 830px;
+                height: 720px;
 
                 img {
                     &:nth-child(3),
@@ -1893,9 +1917,9 @@
                         display: block;
                     }
 
-                    margin-bottom: -15vh;
+                    margin-bottom: -150px;
                     width: 100%;
-                    height: 300px;
+                    height: 280px;
                 }
             }
 
@@ -1903,12 +1927,12 @@
                 display: flex;
                 flex-direction: column;
                 width: 100%;
-                height: 830px;
+                height: 580px;
 
                 img {
-                    margin-bottom: -15vh;
+                    margin-bottom: -150px;
                     width: 100%;
-                    height: 300px;
+                    height: 250px;
                 }
             }
 
@@ -2074,15 +2098,16 @@
         .InfoBlock {
             width: 100%;
             display: flex;
-            gap: 10px;
+            flex-direction: column;
+            gap: 25px;
 
             &-img {
-                width: 359px;
+                width: 100%;
                 height: 407px;
                 border-radius: 20px;
 
                 img {
-                    width: 359px;
+                    width: 100%;
                     height: 407px;
                 }
             }
@@ -2091,6 +2116,7 @@
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
+                width: 100%;
 
                 h1 {
                     font-family: Helvetica;
